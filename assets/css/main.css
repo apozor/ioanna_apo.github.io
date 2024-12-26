@@ -2978,6 +2978,22 @@ input, select, textarea {
 		.wrapper.style2 {
 			background-color: #ffffff;
 		}
+		
+		.image-container {
+			display: flex;
+			justify-content: space-between; /* Distribute space between images */
+			width: 100%; /* Ensure it takes the full width of the parent */
+		}
+		
+		.side-image {
+			width: 32%; /* Each image takes up 32% of the container's width (leaving space between images) */
+			height: auto; /* Maintain the aspect ratio */
+		}
+		
+		.side-image {
+			height: 200px; /* You can adjust this value to suit your design */
+			width: auto; /* Maintain aspect ratio */
+		}
 
 		.wrapper.style3 {
 			background-color: #2e3842;
