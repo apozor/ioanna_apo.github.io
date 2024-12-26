@@ -3626,7 +3626,7 @@ input, select, textarea {
 				-webkit-transition-delay: 0.25s;
 				-ms-transition-delay: 0.25s;
 				transition-delay: 0.25s;
-				background: #ffffff;
+				background: #2e3d52;
 				content: '';
 				display: block;
 				height: 2px;
@@ -3830,10 +3830,10 @@ input, select, textarea {
 
 	#main > header {
 		padding: 12em 0 10em 0 ;
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner_bw.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner_bw.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner_bw.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner_bw.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
