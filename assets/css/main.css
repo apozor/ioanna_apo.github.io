@@ -31,6 +31,10 @@ footer, header, hgroup, menu, nav, section {
 	display: block;}
 
 /* If the opacity is applied globally, you might want to remove it from the body or container */
+body {
+    background: #fff; /* Set background to white */
+    opacity: 1 !important; /* Ensure full visibility, no transparency */
+}
 
 body {
 	line-height: 1;
@@ -3450,7 +3454,7 @@ pre code {
 		}
 
 	body.is-menu-visible #page-wrapper {
-		opacity: 0.35;
+		opacity: 0;
 	}
 
 		body.is-menu-visible #page-wrapper:before {
