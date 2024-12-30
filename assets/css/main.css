@@ -3616,6 +3616,7 @@ pre code {
 	}
 
 		#banner h2 {
+			color: #2e3842; /* Dark blue color */
 			-moz-transform: scale(1);
 			-webkit-transform: scale(1);
 			-ms-transform: scale(1);
