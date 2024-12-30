@@ -3664,12 +3664,13 @@ pre code {
 			}
 
 		#banner p {
+			color: white;
 			letter-spacing: 0.225em;
 			text-transform: uppercase;
 		}
 
 			#banner p a {
-				color: inherit;
+				color: white;
 			}
 
 		#banner .more {
@@ -3929,7 +3930,7 @@ body.is-mobile #main > header {
 
 	/* For the footer section (no changes needed unless you want to update it too) */
 	body.landing #footer {
-		background-color: rgba(255, 255, 255, 0.9); /* You can keep this or set to white if desired */
+		background-color: #2e3842; /* You can keep this or set to white if desired */
 	}
 
 	/* For mobile-specific styles */
@@ -3946,5 +3947,5 @@ body.is-mobile #main > header {
 
 	/* Footer for mobile-specific styles */
 	body.is-mobile.landing #footer {
-		background-color: #e6eaed; /* No transparency */
+		background-color: #2e3842; /* No transparency */
 	}
