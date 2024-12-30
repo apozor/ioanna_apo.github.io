@@ -3471,6 +3471,7 @@ pre code {
 /* Header */
 
 	#header {
+		color: #2e3842; /* Dark blue color */
 		-moz-transition: background-color 0.2s ease;
 		-webkit-transition: background-color 0.2s ease;
 		-ms-transition: background-color 0.2s ease;
@@ -3634,6 +3635,7 @@ pre code {
 		}
 
 			#banner h2:before, #banner h2:after {
+				color: #2e3842; /* Dark blue color */
 				-moz-transition: width 0.85s ease;
 				-webkit-transition: width 0.85s ease;
 				-ms-transition: width 0.85s ease;
@@ -3920,7 +3922,7 @@ body.is-mobile #main > header {
 	/* For the main page wrapper (no background image) */
 	body.landing #page-wrapper {
 		background-image: none; /* Remove the background image */
-		background-color: white; /* Set a solid white background */
+		background-color: #e6eaed; /* Set a solid white background */
 		padding-top: 0; /* Keep padding-top as is */
 	}
 
@@ -3938,10 +3940,10 @@ body.is-mobile #main > header {
 	body.is-mobile.landing #banner,
 	body.is-mobile.landing .wrapper.style4 {
 		background-image: none; /* Remove background image from banner */
-		background-color: white; /* Optional: You can set a solid color here if needed */
+		background-color: #e6eaed; /* Optional: You can set a solid color here if needed */
 	}
 
 	/* Footer for mobile-specific styles */
 	body.is-mobile.landing #footer {
-		background-color: #ffffff; /* No transparency */
+		background-color: #e6eaed; /* No transparency */
 	}

@@ -80,7 +80,20 @@
 						<div class="inner">
 							<header class="major">			
 								<h2>RSVP</h2>
-								<p>Please let us know if you can join us by the end of March. Your reply will help us make sure everything is ready for a fantastic celebration</p>
+								<p>Please let us know if you can join us by the end of March. Your reply will help us make sure everything is ready for a fantastic celebration
+									<form action="your-backend-endpoint" method="post">
+										<label for="name">Your Name:</label>
+										<input type="text" id="name" name="name" required>
+										<label for="email">Your Email:</label>
+										<input type="email" id="email" name="email" required>
+										<label for="attendance">Will you attend?</label>
+										<select id="attendance" name="attendance" required>
+											<option value="yes">Yes</option>
+											<option value="no">No</option>
+										</select>
+										<button type="submit">Submit</button>
+									</form>
+								</p>
 							</header>
 						</div>
 					</section>
