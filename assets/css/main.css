@@ -3855,6 +3855,18 @@ pre code {
     margin: 0 0 0.5em 0;
 }
 
+/* Title and header text color - change from white to dark blue */
+#main > header h1, 
+#main > header h2 {
+    color: #2e3842; /* Set the font color to dark blue */
+}
+
+/* Header text and other properties */
+#main > header h2 {
+    font-size: 1.75em;
+    margin: 0 0 0.5em 0;
+}
+
 #main > header p {
     color: inherit;
     letter-spacing: 0.225em;
