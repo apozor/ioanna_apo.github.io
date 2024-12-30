@@ -3994,37 +3994,31 @@ pre code {
 
 /* Landing */
 
+	/* For the main page wrapper (no background image) */
 	body.landing #page-wrapper {
-		background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../../images/banner.jpg");
-		background-attachment: fixed;
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		padding-top: 0;
+		background-image: none; /* Remove the background image */
+		background-color: white; /* Set a solid white background */
+		padding-top: 0; /* Keep padding-top as is */
 	}
 
+	/* For the footer section (no changes needed unless you want to update it too) */
 	body.landing #footer {
-		background-color: rgba(255, 255, 255, 0.9);
+		background-color: rgba(255, 255, 255, 0.9); /* You can keep this or set to white if desired */
 	}
 
+	/* For mobile-specific styles */
 	body.is-mobile.landing #page-wrapper {
-		background: none;
+		background: none; /* Remove background on mobile */
 	}
 
+	/* For mobile-specific banner styles */
 	body.is-mobile.landing #banner,
 	body.is-mobile.landing .wrapper.style4 {
-		background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../../images/banner.jpg");
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
+		background-image: none; /* Remove background image from banner */
+		background-color: white; /* Optional: You can set a solid color here if needed */
 	}
 
+	/* Footer for mobile-specific styles */
 	body.is-mobile.landing #footer {
-		background-color: #ffffff;
+		background-color: #ffffff; /* No transparency */
 	}
