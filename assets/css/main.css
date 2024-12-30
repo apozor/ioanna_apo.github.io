@@ -176,7 +176,7 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
 }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+h1 a, h2 a, p, h3 a, h4 a, h5 a, h6 a {
     color: inherit;
     text-decoration: none;
 }
@@ -1774,7 +1774,7 @@ pre code {
 	}
 
 	header p {
-		color: rgba(255, 255, 255, 0.5);
+		color: #2b4459;
 		position: relative;
 		top: -0.25em;
 	}
@@ -2857,7 +2857,7 @@ pre code {
 			}
 
 			.wrapper.style1 header p {
-				color: #0c2b40;
+				color: #2b4459;
 			}
 
 			.wrapper.style1 header.major h2, .wrapper.style1 header.major h3, .wrapper.style1 header.major h4, .wrapper.style1 header.major h5, .wrapper.style1 header.major h6 {
@@ -3873,7 +3873,7 @@ pre code {
 }
 
 #main > header p {
-    color: inherit;
+    color: #2b4459;
     letter-spacing: 0.225em;
     text-transform: uppercase;
     top: 0;
