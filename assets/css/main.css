@@ -31,10 +31,6 @@ footer, header, hgroup, menu, nav, section {
 	display: block;}
 
 /* If the opacity is applied globally, you might want to remove it from the body or container */
-body {
-    background: #fff; /* Set the body background to white */
-    opacity: 1 !important; /* Ensure no opacity effect is applied */
-}
 
 body {
 	line-height: 1;
