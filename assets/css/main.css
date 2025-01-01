@@ -3634,9 +3634,11 @@ pre code {
 			-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
 			transition: transform 0.5s ease, opacity 0.5s ease;
 			display: inline-block;
-			font-size: 1.75em;
+			font-size: 2.75em;
 			opacity: 1;
-			padding: 0.35em 1em;
+			/*padding: 0.35em 1em;*/
+			padding: 0; /* Remove any padding that could create spacing */
+			border: none; /* Ensure no borders are applied */
 			position: relative;
 			z-index: 1;
 		}
