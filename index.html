@@ -108,26 +108,43 @@
 					</section>
 
 				<!-- Four -->
-					<section id="one" class="wrapper style1 special">
-						<div class="inner">
-							<header class="major">			
-								<h2>RSVP</h2>
-								<p>Please let us know if you can join us by the end of March. Your reply will help us make sure everything is ready for a fantastic celebration</p>
-							</header>
-							<form action="your-backend-endpoint" method="post">
-								<label for="name">Your Name:</label>
-								<input type="text" id="name" name="name" required>
-								<label for="email">Your Email:</label>
-								<input type="email" id="email" name="email" required>
-								<label for="attendance">Will you attend?</label>
-								<select id="attendance" name="attendance" required>
-									<option value="yes">Yes</option>
-									<option value="no">No</option>
-								</select>
-								<button type="submit">Submit</button>
-							</form>
-						</div>
-					</section>
+				<section id="rsvp" class="wrapper style1 special">
+					<div class="inner">
+						<header class="major">
+							<h2>RSVP</h2>
+							<p>Please let us know if you can join us by the end of March. Your reply will help us make sure everything is ready for a fantastic celebration.</p>
+						</header>
+						<form action="https://formspree.io/f/meoopqdq" method="POST">
+							<div class="fields">
+								<div class="field">
+									<label for="name">Name</label>
+									<input type="text" id="name" name="name" placeholder="Your Name" required />
+								</div>
+								<div class="field">
+									<label for="email">Email</label>
+									<input type="email" id="email" name="email" placeholder="Your Email" required />
+								</div>
+								<div class="field">
+									<label for="attendance">Will you attend?</label>
+									<select id="attendance" name="attendance" required>
+										<option value="" disabled selected>-- Select an option --</option>
+										<option value="Yes">Yes</option>
+										<option value="No">No</option>
+										<option value="Maybe">Maybe</option>
+									</select>
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea id="message" name="message" placeholder="Any special requests or comments"></textarea>
+								</div>
+							</div>
+							<ul class="actions special">
+								<li><button type="submit" class="button primary">Submit</button></li>
+							</ul>
+						</form>
+					</div>
+				</section>
+				
 				
 				<!-- Six -->
 				<section id="one" class="wrapper style1 special">
