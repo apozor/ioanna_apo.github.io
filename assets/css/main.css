@@ -2110,16 +2110,17 @@ pre code {
 		display: flex; /* Arrange the photos side by side */
 		justify-content: center; /* Center the photos horizontally */
 		gap: 1rem; /* Add space between the photos */
-		margin-top: 1rem; /* Add some space above the gallery */
+		flex-wrap: wrap; /* Allow wrapping if screen size is small */
+		margin-top: 1rem; /* Add space above the gallery */
 	}
-
+	
 	#photos .photo-gallery img {
-		max-width: 30%; /* Ensure each photo takes up equal width */
+		max-width: 100%; /* Ensure photos are responsive */
+		width: 30%; /* Set each photo to occupy a third of the container width */
 		height: auto; /* Maintain aspect ratio */
 		border-radius: 8px; /* Optional: Add rounded corners */
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 	}
-
 	.image {
 		border-radius: 3px;
 		border: 0;
