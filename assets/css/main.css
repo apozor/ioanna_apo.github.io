@@ -2119,7 +2119,7 @@ pre code {
 		width: 33.3%; /* Set each photo to occupy a third of the container width */
 		/*height: 150px; /* Limit the height to a smaller value */
 		height: auto; /* Limit the height to a smaller value */
-		object-fit: cover; /* Ensure the photos are cropped proportionally */
+		/*object-fit: cover; /* Ensure the photos are cropped proportionally */
 		border-radius: 8px; /* Optional: Add rounded corners */
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 	}
