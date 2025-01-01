@@ -2118,7 +2118,7 @@ pre code {
 	#photos .photo-gallery img {
 		max-width: 100%; /* Ensure photos are responsive */
 		width: 30%; /* Set each photo to occupy a third of the container width */
-		height: 160px; /* Limit the height to a smaller value */
+		height: 300px; /* Limit the height to a smaller value */
 		/*height: auto; /* Limit the height to a smaller value */
 		object-fit: contain; /* Ensure the entire image is visible */
 		border-radius: 8px; /* Optional: Add rounded corners */
