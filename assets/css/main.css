@@ -3368,10 +3368,10 @@ pre code {
 /* Page Wrapper + Menu */
 
 	#page-wrapper {
-		-moz-transition: opacity 0.5s ease;
-		-webkit-transition: opacity 0.5s ease;
-		-ms-transition: opacity 0.5s ease;
-		transition: opacity 0.5s ease;
+		-moz-transition: opacity 0.0s ease;
+		-webkit-transition: opacity 0.0s ease;
+		-ms-transition: opacity 0.0s ease;
+		transition: opacity 0.0s ease;
 		opacity: 1;
 		padding-top: 3em;
 	}
@@ -3394,10 +3394,10 @@ pre code {
 		-webkit-transform: translateX(20em);
 		-ms-transform: translateX(20em);
 		transform: translateX(20em);
-		-moz-transition: -moz-transform 0.5s ease;
-		-webkit-transition: -webkit-transform 0.5s ease;
-		-ms-transition: -ms-transform 0.5s ease;
-		transition: transform 0.5s ease;
+		-moz-transition: -moz-transform 0.0s ease;
+		-webkit-transition: -webkit-transform 0.0s ease;
+		-ms-transition: -ms-transform 0.0s ease;
+		transition: transform 0.0s ease;
 		-webkit-overflow-scrolling: touch;
 		background: #21b2a6;
 		color: #ffffff;
@@ -3640,10 +3640,10 @@ pre code {
 			-webkit-transform: scale(1);
 			-ms-transform: scale(1);
 			transform: scale(1);
-			-moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
-			-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
-			-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
-			transition: transform 0.5s ease, opacity 0.5s ease;
+			-moz-transition: -moz-transform 0.0s ease, opacity 0.0s ease;
+			-webkit-transition: -webkit-transform 0.0s ease, opacity 0.0s ease;
+			-ms-transition: -ms-transform 0.0s ease, opacity 0.0s ease;
+			transition: transform 0.0s ease, opacity 0.0s ease;
 			display: inline-block;
 			font-size: 2.75em;
 			opacity: 1;
