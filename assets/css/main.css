@@ -2117,9 +2117,9 @@ pre code {
 	#photos .photo-gallery img {
 		max-width: 100%; /* Ensure photos are responsive */
 		width: 33%; /* Set each photo to occupy a third of the container width */
-		height: 140px; /* Limit the height to a smaller value */
+		height: 150px; /* Limit the height to a smaller value */
 		/*height: auto; /* Limit the height to a smaller value */
-		object-fit: cover; /* Ensure the photos are cropped proportionally */
+		/*object-fit: cover; /* Ensure the photos are cropped proportionally */
 		border-radius: 8px; /* Optional: Add rounded corners */
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 	}
@@ -3192,23 +3192,23 @@ pre code {
 
 		.wrapper.style5 {
 			background-color: #ffffff;
-			color: #4E4852;
+			color: #2e3842;
 		}
 
 			.wrapper.style5 strong, .wrapper.style5 b {
-				color: #2E3842;
+				color: #2e3842;
 			}
 
 			.wrapper.style5 h2, .wrapper.style5 h3, .wrapper.style5 h4, .wrapper.style5 h5, .wrapper.style5 h6 {
-				color: #2E3842;
+				color: #2e3842;
 			}
 
 			.wrapper.style5 hr {
-				border-color: #dfdfdf;
+				border-color: #2e3842;
 			}
 
 			.wrapper.style5 blockquote {
-				border-color: #dfdfdf;
+				border-color: #2e3842;
 			}
 
 			.wrapper.style5 code {
