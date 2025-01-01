@@ -40,11 +40,38 @@
 					<section id="banner">
 						<div class="inner">
 							<h2>Ioanna & Apostolos</h2>
-							<p>08.06.2025<br /></p>
+							<p>08.06.2025<br />
+							<span id="countdown">Loading...</span>
+        					</p>
+        					<ul class="actions special">
+            					<li><a href="#" class="button primary">Let's Party</a></li>
+        					</ul>
 						</div>
 						<a href="#one" class="more scrolly">Learn More</a>
 					</section>
-				
+
+					<!-- Countdown Script -->
+					<script>
+						const weddingDate = new Date(2025, 5, 8, 18, 0, 0).getTime();
+						const countdownTimer = setInterval(() => {
+							const now = new Date().getTime();
+							const timeLeft = weddingDate - now;
+
+							const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+							const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+							const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+							const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+							document.getElementById('countdown').innerHTML =
+								`${days} Days, ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
+
+							if (timeLeft < 0) {
+								clearInterval(countdownTimer);
+								document.getElementById('countdown').innerHTML = "The celebration has begun!";
+							}
+						}, 1000);
+					</script>
+					
 					<!-- Photos Section -->
 				<section id="photos" class="wrapper style1 special">
 					<div class="inner">

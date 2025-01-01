@@ -3780,7 +3780,8 @@ pre code {
 				}
 
 		}
-
+	
+	
 	body.is-preload #banner h2 {
 		-moz-transform: scale(0.95);
 		-webkit-transform: scale(0.95);
@@ -3803,6 +3804,14 @@ pre code {
 
 	body.is-preload #banner:after {
 		opacity: 1;
+	}
+
+	#countdown {
+		font-size: 1.2em;
+		color: #2e3842; /* Match dark blue color of Ioanna & Apostolos */
+		font-weight: bold;
+		margin-top: 0.5rem; /* Add spacing above */
+		display: block; /* Ensure it's on a new line */
 	}
 
 /* CTA */
