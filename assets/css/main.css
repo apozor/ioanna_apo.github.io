@@ -191,17 +191,11 @@ h2 {
 
 #one h2 {
     font-family: 'Dancing Script', cursive; /* Apply Dancing Script font only to h2 in #one section */
-    font-size: 2.5em;  /* Adjust the size as needed */
+    font-size: 2.0em;  /* Adjust the size as needed */
     text-align: center; /* Optional: center align the text */
     margin-bottom: 1em; /* Optional: space below the header */
 }
 
-#one a.more.scrolly {
-    color: #df4343; /* Replace 'darkblue' with the same color as Ioanna & Apostolos */
-}
-#one a.more.scrolly:hover {
-    color: #2b4459; /* Replace 'lightblue' with your desired hover color */
-}
 /* For small screens */
 @media screen and (max-width: 736px) {
     h2 {
