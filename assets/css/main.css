@@ -196,10 +196,10 @@ h2 {
     margin-bottom: 1em; /* Optional: space below the header */
 }
 
-a.more.scrolly {
+#one a.more.scrolly {
     color: #df4343; /* Replace 'darkblue' with the same color as Ioanna & Apostolos */
 }
-a.more.scrolly:hover {
+#one a.more.scrolly:hover {
     color: #2b4459; /* Replace 'lightblue' with your desired hover color */
 }
 /* For small screens */
