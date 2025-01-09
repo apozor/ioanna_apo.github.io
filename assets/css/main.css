@@ -231,7 +231,7 @@ h2 {
 /* Styling for the dot (first column) */
 .dot {
     width: 10px;
-    height: 10px;
+    height: 100%; /* Make the dot expand vertically within its grid cell */
     background-color: black; /* Dot color */
     border-radius: 50%; /* Make it circular */
     margin: auto;
@@ -254,6 +254,7 @@ h2 {
 .time-slot:last-child .dot::after {
     display: none;
 }
+
 
 /* Styling for the time (second column) */
 .time {
