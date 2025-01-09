@@ -22,16 +22,48 @@
 
 		<!-- Password Protection Script -->
 		<script>
-			// Set the password for the site
-			var password = ["Ia", "Ia ", "Ia25", "Ia25 "]; // Change this to your desired password
-			var enteredPassword = prompt("Speak friend and enter:");
-
-			// Check if the entered password matches the correct password
-			if (enteredPassword !== password) {
-				alert("Incorrect password.");
-				window.location.href = "about:blank"; // Redirect to a blank page if the password is incorrect
+			// Set the list of allowed passwords
+			var allowedPasswords = ["Ia", "Ia ", "Ia25 ", "Ia25"]; // Add possible passwords
+			var maxAttempts = 3; // Set the maximum number of allowed attempts
+			var attempts = 0; // Initialize the attempt counter
+		  
+			// Function to prompt for the password
+			function checkPassword() {
+			  // Prompt the user for a password
+			  var enteredPassword = prompt("Speak friend and enter:");
+		  
+			  // Convert the entered password and allowed passwords to lowercase for case-insensitive comparison
+			  var enteredPasswordLower = enteredPassword.toLowerCase();
+			  var allowedPasswordsLower = allowedPasswords.map(function(password) {
+				return password.toLowerCase();
+			  });
+		  
+			  // Check if the entered password is in the list of allowed passwords
+			  if (allowedPasswordsLower.includes(enteredPasswordLower)) {
+				return true; // Correct password
+			  } else {
+				attempts++; // Increment the attempt counter
+				if (attempts >= maxAttempts) {
+				  alert("Incorrect password. Too many attempts.");
+				  window.location.href = "about:blank"; // Redirect to a blank page after max attempts
+				  return false;
+				} else {
+				  alert("Incorrect password. You have " + (maxAttempts - attempts) + " attempts left.");
+				  return false;
+				}
+			  }
 			}
-		</script>
+		  
+			// Call the password check function
+			var isAuthenticated = checkPassword();
+			if (!isAuthenticated) {
+			  // Keep prompting until the user enters the correct password or max attempts are reached
+			  while (!isAuthenticated && attempts < maxAttempts) {
+				isAuthenticated = checkPassword();
+			  }
+			}
+		  </script>
+		  
 
 	</head>
 	<body class="landing is-preload">
