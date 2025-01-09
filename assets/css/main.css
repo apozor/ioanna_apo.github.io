@@ -252,7 +252,7 @@ h2 {
     z-index: 2;
 }
 
-/* Connecting line */
+/* Connecting dotted line */
 .dot-line::after {
     content: "";
     width: 2px; /* Line width */
@@ -263,6 +263,8 @@ h2 {
     left: 50%; /* Center the line */
     transform: translateX(-50%); /* Ensure the line is centered */
     z-index: 1;
+    border-style: dotted; /* Dotted line */
+    border-width: 1px; /* Adjust line thickness */
 }
 
 /* Remove line for the last time slot */
