@@ -219,40 +219,42 @@
 						</header>
 					</div>
 				</section>
-
+				
 				<!-- CTA -->
-					<section id="cta" class="wrapper style4">
-						<div class="inner">
-							<header>
-								<h2>Let's have a great party</h2>
-								<!-- Countdown Script -->
-								<script>
-									const weddingDate = new Date(2025, 5, 8, 18, 0, 0).getTime();
-									const countdownTimer = setInterval(() => {
-										const now = new Date().getTime();
-										const timeLeft = weddingDate - now;
+				<section id="cta" class="wrapper style4">
+					<div class="inner">
+						<header>
+							<h2>Let's have a great party</h2>
+							<p>Up up up up up the stairs we go</p>
+							<!-- Countdown Display -->
+							<p id="countdown" style="font-size: 1.5em; color: #ff4e50; font-weight: bold;"></p>
+							<!-- Countdown Script -->
+							<script>
+								const weddingDate = new Date(2025, 5, 8, 18, 0, 0).getTime();
+								const countdownTimer = setInterval(() => {
+									const now = new Date().getTime();
+									const timeLeft = weddingDate - now;
 
-										const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-										const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-										const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-										const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+									const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+									const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+									const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+									const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-										document.getElementById('countdown').innerHTML =
-											`${days} Days, ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
+									document.getElementById('countdown').innerHTML =
+										`${days} Days, ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
 
-										if (timeLeft < 0) {
-											clearInterval(countdownTimer);
-											document.getElementById('countdown').innerHTML = "The celebration has begun!";
-										}
-									}, 1000);
-								</script>
-								<p>Up up up up up the stairs we go</p>
-							</header>
-							<ul class="actions stacked">
-								<li><a href="#" class="button fit primary">Stairs</a></li>
-							</ul>
-						</div>
-					</section>
+									if (timeLeft < 0) {
+										clearInterval(countdownTimer);
+										document.getElementById('countdown').innerHTML = "The celebration has begun!";
+									}
+								}, 1000);
+							</script>
+						</header>
+						<ul class="actions stacked">
+							<li><a href="#" class="button fit primary">Stairs</a></li>
+						</ul>
+					</div>
+				</section>
 
 				<!-- Footer -->
 					<footer id="footer">
