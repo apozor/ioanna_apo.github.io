@@ -205,12 +205,14 @@ h2 {
     margin-bottom: 1em; /* Optional: space below the header */
 }
 
-#schedule h2{
-	color: #2e3842
-    font-family: 'Dancing Script', cursive; /* Apply Dancing Script font only to h2 in #one section */
-    font-size: 2.0em;  /* Adjust the size as needed */
-    text-align: center; /* Optional: center align the text */
-    margin-bottom: 1em; /* Optional: space below the header */
+#schedule h2 {
+    color: #2e3842;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.0em;
+    text-align: center;
+    margin-bottom: 1em;
+    font-weight: normal;
+    text-transform: none;
 }
 
 #schedule {
@@ -226,28 +228,18 @@ h2 {
 }
 
 .time-slot {
-    display: contents; /* Makes the children act as grid items */
+    display: flex;
+    align-items: center; /* Center the content vertically */
+    position: relative; /* Ensure proper positioning of dot and line */
 }
 
 /* Dot and connecting line */
 .dot-line {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    justify-content: center; /* Center the dot vertically */
-}
-
-.dot-line::before {
-    content: "";
-    width: 2px; /* Width of the connecting line */
-    height: 100%; /* Full height of the timeline */
-    background-color: #2e3842; /* Line color */
-    position: absolute;
-    top: 0;
-    left: 50%; /* Center the line */
-    transform: translateX(-50%); /* Center align line */
-    z-index: 1;
+    justify-content: center;
 }
 
 /* Dot */
@@ -255,53 +247,53 @@ h2 {
     width: 10px; /* Dot size */
     height: 10px; /* Dot size */
     background-color: #2e3842; /* Dot color */
-    border-radius: 50%; /* Make it circular */
+    border-radius: 50%; /* Circular dot */
     position: relative;
-    z-index: 2; /* Ensure dot is above the line */
+    z-index: 2;
 }
 
-
-.timeline::before {
+/* Connecting line */
+.dot-line::after {
     content: "";
+    width: 2px; /* Line width */
+    height: 100%; /* Make the line stretch across the height of the timeline */
+    background-color: #2e3842; /* Line color */
     position: absolute;
     top: 0;
-    left: 50%;
-    width: 2px;
-    height: 100%;
-    background-color: #2e3842; /* Connecting line color */
-    z-index: 0;
+    left: 50%; /* Center the line */
+    transform: translateX(-50%); /* Ensure the line is centered */
+    z-index: 1;
 }
 
-.time-slot:last-child .dot-line:after {
-    display: none; /* Remove line after the last dot */
+/* Remove line for the last time slot */
+.time-slot:last-child .dot-line::after {
+    display: none;
 }
 
 /* Event Column */
 .event {
     text-align: left;
     font-size: 1.1em;
-	font-weight: normal;
-    text-transform: none; /* Ensure text is not capitalized */
+    font-weight: normal;
+    text-transform: none;
     color: #2e3842;
 }
 
 .event h3 {
     margin: 0;
     font-size: 1.1em;
-	font-weight: normal;
-    text-transform: none; /* Ensure text is not capitalized */
+    font-weight: normal;
+    text-transform: none;
 }
 
 /* Time Column */
 .time {
     text-align: right;
     font-weight: normal;
-    text-transform: none; /* Ensure text is not capitalized */
+    text-transform: none;
     font-size: 1.25em;
     color: #2e3842;
 }
-
-
 
 
 
