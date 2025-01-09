@@ -197,6 +197,65 @@ h2 {
     margin-bottom: 1em; /* Optional: space below the header */
 }
 
+#schedule {
+    text-align: center;
+}
+
+.timeline {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Two columns: time and event */
+    gap: 1rem; /* Spacing between rows */
+    align-items: center; /* Align items vertically */
+    margin-top: 2rem;
+}
+
+.time-slot {
+    display: contents; /* Makes the children act as grid items */
+}
+
+.time {
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #2e3842; /* Dark blue for consistency */
+}
+
+.event {
+    text-align: left;
+    font-size: 1.1em;
+    color: #2e3842;
+}
+
+.event h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.25em;
+}
+
+.event p {
+    margin: 0;
+    font-size: 0.95em;
+}
+
+.event a {
+    color: #007BFF; /* Link color */
+    text-decoration: underline;
+    font-size: 0.95em;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.timeline .time-slot:not(:last-child):after {
+    content: "";
+    width: 2px;
+    height: 50px;
+    background-color: black;
+    position: relative;
+    margin: auto;
+    grid-column: 1 / 2;
+    grid-row: span 1;
+}
+
+
 /* For small screens */
 @media screen and (max-width: 736px) {
     h2 {
