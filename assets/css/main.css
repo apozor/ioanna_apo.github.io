@@ -221,55 +221,46 @@ h2 {
 
 .timeline {
     display: grid;
-    grid-template-columns: auto 1fr auto; /* Three columns: dot-line, event, time */
-    gap: 1rem; /* Spacing between columns */
+    grid-template-columns: auto 1fr auto;
+    gap: 1rem;
     align-items: center;
     margin-top: 2rem;
 }
 
 .time-slot {
-    display: flex;
-    align-items: center; /* Center the content vertically */
-    position: relative; /* Ensure proper positioning of dot and line */
+    display: contents;
 }
 
 /* Dot and connecting line */
 .dot-line {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    position: relative;
 }
 
-/* Dot */
-.dot {
-    width: 10px; /* Dot size */
-    height: 10px; /* Dot size */
+.dot-line:before {
+    content: "";
+    width: 10px;
+    height: 10px;
     background-color: #2e3842; /* Dot color */
-    border-radius: 50%; /* Circular dot */
+    border-radius: 50%;
     position: relative;
     z-index: 2;
 }
 
-/* Connecting dotted line */
-.dot-line::after {
+.dot-line:after {
     content: "";
-    width: 2px; /* Line width */
-    height: 100%; /* Make the line stretch across the height of the timeline */
-    background-color: #2e3842; /* Line color */
+    width: 2px;
+    height: 100%;
+    background-color: #2e3842; /* Connecting line color */
     position: absolute;
-    top: 0;
-    left: 50%; /* Center the line */
-    transform: translateX(-50%); /* Ensure the line is centered */
+    top: 10px;
     z-index: 1;
-    border-style: dotted; /* Dotted line */
-    border-width: 1px; /* Adjust line thickness */
 }
 
-/* Remove line for the last time slot */
-.time-slot:last-child .dot-line::after {
-    display: none;
+.time-slot:last-child .dot-line:after {
+    display: none; /* Remove line after the last dot */
 }
 
 /* Event Column */
@@ -296,7 +287,6 @@ h2 {
     font-size: 1.25em;
     color: #2e3842;
 }
-
 
 
 /* For small screens */
