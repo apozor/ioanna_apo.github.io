@@ -219,7 +219,7 @@ h2 {
 
 .timeline {
     display: grid;
-    grid-template-columns: auto 1fr auto; /* Three columns: dot-line, event, time */
+    grid-template-columns: 1fr 2fr 3fr;; /* Three columns: dot-line, event, time */
     gap: 1rem; /* Spacing between columns */
     align-items: center;
     margin-top: 2rem;
@@ -228,6 +228,29 @@ h2 {
 .time-slot {
     display: contents; /* Makes the children act as grid items */
 }
+
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: black; /* Dot color */
+    border-radius: 50%; /* Make it circular */
+    margin: auto;
+    position: relative;
+}
+
+/* Connect the dots with a line */
+.dot::after {
+    content: "";
+    width: 2px;
+    height: 100%; /* Full height to connect dots */
+    background-color: black; /* Line color */
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 
 /* Dot and connecting line */
 .dot-line {
@@ -263,7 +286,7 @@ h2 {
 
 /* Event Column */
 .event {
-    text-align: left;
+    text-align: right;
     font-size: 1.1em;
     color: #2e3842;
     font-weight: normal; /* Remove bold */
@@ -279,7 +302,7 @@ h2 {
 
 /* Time Column */
 .time {
-    text-align: right;
+    text-align: left;
     font-size: 1.1em; /* Adjust to match event size */
     color: #2e3842;
     font-weight: normal; /* Remove bold */
