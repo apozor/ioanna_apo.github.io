@@ -225,7 +225,7 @@ h2 {
     content: "";
     width: 10px;
     height: 10px;
-    background-color: #007BFF; /* Blue dot */
+    background-color: #2e3842; /* Blue dot */
     border-radius: 50%;
     position: relative;
     z-index: 2;
@@ -234,12 +234,16 @@ h2 {
 .dot-line:after {
     content: "";
     width: 2px;
-    height: 100%;
-    background-color: #007BFF; /* Connecting line */
+    height: 100%; /* Default height, overridden by JavaScript */
+    background-color: #2e3842;
     position: absolute;
     top: 10px;
     z-index: 1;
 }
+.dot-line:after {
+    height: var(--line-height, 50px); /* Fallback to 50px if JavaScript doesn't run */
+}
+
 
 .time-slot:last-child .dot-line:after {
     display: none; /* Remove line after the last dot */
@@ -250,20 +254,26 @@ h2 {
     text-align: left;
     font-size: 1.1em;
     color: #2e3842;
+    font-weight: normal; /* Remove bold */
+    text-transform: none; /* Remove capitalization */
 }
 
 .event h3 {
     margin: 0;
-    font-size: 1.25em;
+    font-size: 1.1em; /* Adjust to desired size */
+    font-weight: normal; /* Remove bold */
+    text-transform: none; /* Remove capitalization */
 }
 
 /* Time Column */
 .time {
     text-align: right;
-    font-weight: bold;
-    font-size: 1.25em;
+    font-size: 1.1em; /* Adjust to match event size */
     color: #2e3842;
+    font-weight: normal; /* Remove bold */
+    text-transform: none; /* Remove capitalization */
 }
+
 
 
 /* For small screens */

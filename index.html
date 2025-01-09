@@ -195,33 +195,45 @@
 							<h2>Schedule</h2>
 						</header>
 						<div class="timeline">
-							<div class="time-slot">
-								<div class="dot-line"></div>
+							<!-- Ceremony -->
+							<div class="time-slot" data-time="1080"> <!-- 1080 = 18:00 in minutes -->
+								<div class="dot-line">
+									<div class="dot"></div>
+								</div>
 								<div class="event">
 									<h3>Ceremony</h3>
 								</div>
-								<div class="time">18:00pm</div>
+								<div class="time">18:00</div>
 							</div>
-							<div class="time-slot">
-								<div class="dot-line"></div>
+							<!-- Welcome Drink -->
+							<div class="time-slot" data-time="1110"> <!-- 1110 = 18:30 in minutes -->
+								<div class="dot-line">
+									<div class="dot"></div>
+								</div>
 								<div class="event">
 									<h3>Welcome Drink</h3>
 								</div>
-								<div class="time">18:30pm</div>
+								<div class="time">18:30</div>
 							</div>
-							<div class="time-slot">
-								<div class="dot-line"></div>
+							<!-- Dinner Time -->
+							<div class="time-slot" data-time="1170"> <!-- 1170 = 19:30 in minutes -->
+								<div class="dot-line">
+									<div class="dot"></div>
+								</div>
 								<div class="event">
 									<h3>Dinner Time</h3>
 								</div>
-								<div class="time">19:30pm</div>
+								<div class="time">19:30</div>
 							</div>
-							<div class="time-slot">
-								<div class="dot-line"></div>
+							<!-- Let's Party -->
+							<div class="time-slot" data-time="1260"> <!-- 1260 = 21:00 in minutes -->
+								<div class="dot-line">
+									<div class="dot"></div>
+								</div>
 								<div class="event">
 									<h3>Let's Party</h3>
 								</div>
-								<div class="time">21:00pm</div>
+								<div class="time">21:00</div>
 							</div>
 						</div>
 					</div>
@@ -239,7 +251,7 @@
 
 							If you really like to support us more, we’re raising funds for our dream honeymoon trip to the Everest Base Camp, and let’s just say, reaching new heights doesn’t come cheap! And who knows, you might get a postcard!  <br />
 							
-							In order to contribute click <a href="https://www.paypal.me/apozor" target="_blank">here</a> to donate, either use the IBAN: DE07120300001072391558 under any of our names.</p>
+							In order to contribute click <a href="https://www.paypal.me/apozor" target="_blank">here</a> to donate via PayPal, either use the IBAN: <b>DE07 1203 0000 1072 3915 58</b> under any of our names.</p>
 						</header>
 					</div>
 				</section>
@@ -320,5 +332,28 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+			<script>
+				document.addEventListener("DOMContentLoaded", () => {
+					const timeSlots = document.querySelectorAll(".time-slot");
+					const slotArray = Array.from(timeSlots);
+		
+					slotArray.forEach((slot, index) => {
+						if (index === slotArray.length - 1) return; // Skip the last slot
+		
+						const currentTime = parseInt(slot.dataset.time, 10);
+						const nextTime = parseInt(slotArray[index + 1].dataset.time, 10);
+		
+						const timeDifference = nextTime - currentTime; // Time difference in minutes
+		
+						// Calculate proportional height (adjust multiplier as needed)
+						const height = timeDifference * 2; // Example: 2px per minute
+		
+						const dotLine = slot.querySelector(".dot-line:after");
+						if (dotLine) {
+							slot.querySelector(".dot-line").style.setProperty("--line-height", `${height}px`);
+						}
+					});
+				});
+			</script>
 	</body>
 </html>
