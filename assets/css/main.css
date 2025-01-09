@@ -203,9 +203,9 @@ h2 {
 
 .timeline {
     display: grid;
-    grid-template-columns: auto 1fr; /* Two columns: time and event */
-    gap: 1rem; /* Spacing between rows */
-    align-items: center; /* Align items vertically */
+    grid-template-columns: auto 1fr auto; /* Three columns: dot-line, event, time */
+    gap: 1rem; /* Spacing between columns */
+    align-items: center;
     margin-top: 2rem;
 }
 
@@ -213,13 +213,39 @@ h2 {
     display: contents; /* Makes the children act as grid items */
 }
 
-.time {
-    text-align: right;
-    font-weight: bold;
-    font-size: 1.25em;
-    color: #2e3842; /* Dark blue for consistency */
+/* Dot and connecting line */
+.dot-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
+.dot-line:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #007BFF; /* Blue dot */
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.dot-line:after {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background-color: #007BFF; /* Connecting line */
+    position: absolute;
+    top: 10px;
+    z-index: 1;
+}
+
+.time-slot:last-child .dot-line:after {
+    display: none; /* Remove line after the last dot */
+}
+
+/* Event Column */
 .event {
     text-align: left;
     font-size: 1.1em;
@@ -227,32 +253,16 @@ h2 {
 }
 
 .event h3 {
-    margin: 0 0 0.5rem;
+    margin: 0;
     font-size: 1.25em;
 }
 
-.event p {
-    margin: 0;
-    font-size: 0.95em;
-}
-
-.event a {
-    color: #007BFF; /* Link color */
-    text-decoration: underline;
-    font-size: 0.95em;
-    display: inline-block;
-    margin-top: 0.5rem;
-}
-
-.timeline .time-slot:not(:last-child):after {
-    content: "";
-    width: 2px;
-    height: 50px;
-    background-color: black;
-    position: relative;
-    margin: auto;
-    grid-column: 1 / 2;
-    grid-row: span 1;
+/* Time Column */
+.time {
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #2e3842;
 }
 
 
