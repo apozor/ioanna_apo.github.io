@@ -204,61 +204,76 @@ h2 {
     text-align: center; /* Optional: center align the text */
     margin-bottom: 1em; /* Optional: space below the header */
 }
+#schedule {
+	text-align: center; /* Optional: center align the text */
+}
 
-#schedule h2 {
+#schedule h2{
 	color: #2e3842
     font-family: 'Dancing Script', cursive; /* Apply Dancing Script font only to h2 in #one section */
     font-size: 2.0em;  /* Adjust the size as needed */
     text-align: center; /* Optional: center align the text */
     margin-bottom: 1em; /* Optional: space below the header */
 }
+
 .timeline {
     display: grid;
-    grid-template-columns: auto 1fr auto; /* Three columns: dot-line, event, time */
+    grid-template-columns: 1fr 2fr 3fr; /* Three columns: dot, time, event */
     gap: 1rem; /* Spacing between columns */
-    align-items: center;
+    align-items: center; /* Vertically align items */
     margin-top: 2rem;
 }
 
 .time-slot {
-    display: contents; /* Makes the children act as grid items */
+    display: contents; /* Allow grid children to behave like grid items */
 }
 
-/* Dot and connecting line */
-.dot-line {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
-.dot-line:before {
-    content: "";
+/* Styling for the dot (first column) */
+.dot {
     width: 10px;
     height: 10px;
-    background-color: #2e3842; /* Blue dot */
-    border-radius: 50%;
+    background-color: black; /* Dot color */
+    border-radius: 50%; /* Make it circular */
+    margin: auto;
     position: relative;
-    z-index: 2;
 }
 
-.dot-line:after {
+/* Connect the dots with a line */
+.dot::after {
     content: "";
     width: 2px;
-    height: 100%; /* Default height, overridden by JavaScript */
-    background-color: #2e3842;
+    height: 100%; /* Full height to connect dots */
+    background-color: black; /* Line color */
     position: absolute;
-    top: 10px;
-    z-index: 1;
-}
-.dot-line:after {
-    height: var(--line-height, 50px); /* Fallback to 50px if JavaScript doesn't run */
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-
-.time-slot:last-child .dot-line:after {
-    display: none; /* Remove line after the last dot */
+/* Remove the line after the last dot */
+.time-slot:last-child .dot::after {
+    display: none;
 }
+
+/* Styling for the time (second column) */
+.time {
+    font-size: 1.25em;
+    color: #2e3842;
+    text-align: center;
+}
+
+/* Styling for the event (third column) */
+.event {
+    text-align: left; /* Align event details to the left */
+    font-size: 1.25em;
+    color: #2e3842;
+}
+
+.event h3 {
+    margin: 0;
+    font-size: 1.25em;
+}
+
 
 /* Event Column */
 .event {
