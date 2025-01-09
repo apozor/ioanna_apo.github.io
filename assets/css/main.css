@@ -219,61 +219,73 @@ h2 {
 
 .timeline {
     display: grid;
-    grid-template-columns: 1fr 2fr 3fr; /* Three columns: dot, time, event */
+    grid-template-columns: auto 1fr auto; /* Three columns: dot-line, event, time */
     gap: 1rem; /* Spacing between columns */
-    align-items: center; /* Vertically align items */
+    align-items: center;
     margin-top: 2rem;
 }
 
 .time-slot {
-    display: contents; /* Allow grid children to behave like grid items */
+    display: contents; /* Makes the children act as grid items */
 }
 
-/* Styling for the dot (first column) */
-.dot {
-    width: 10px;
-    height: 10px;
-    background-color: black; /* Dot color */
-    border-radius: 50%; /* Make it circular */
-    margin: auto;
+/* Dot and connecting line */
+.dot-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
 }
 
-/* Connect the dots with a line */
-.dot::after {
+.dot-line:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #2e3842; /* Blue dot */
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.dot-line:after {
     content: "";
     width: 2px;
-    height: 100%; /* Full height to connect dots */
-    background-color: black; /* Line color */
+    height: 100%;
+    background-color: #2e3842; /* Connecting line */
     position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 10px;
+    z-index: 1;
 }
 
-/* Remove the line after the last dot */
-.time-slot:last-child .dot::after {
-    display: none;
+.time-slot:last-child .dot-line:after {
+    display: none; /* Remove line after the last dot */
 }
 
-/* Styling for the time (second column) */
-.time {
-    font-size: 1.25em;
-    color: #2e3842;
-    text-align: center;
-}
-
-/* Styling for the event (third column) */
+/* Event Column */
 .event {
-    text-align: left; /* Align event details to the left */
-    font-size: 1.25em;
+    text-align: left;
+    font-size: 1.1em;
     color: #2e3842;
+    font-weight: normal; /* Remove bold */
+    text-transform: none; /* Remove capitalization */
 }
 
 .event h3 {
     margin: 0;
-    font-size: 1.25em;
+    font-size: 1.1em; /* Adjust to desired size */
+    font-weight: normal; /* Remove bold */
+    text-transform: none; /* Remove capitalization */
 }
+
+/* Time Column */
+.time {
+    text-align: right;
+    font-size: 1.1em; /* Adjust to match event size */
+    color: #2e3842;
+    font-weight: normal; /* Remove bold */
+    text-transform: none; /* Remove capitalization */
+}
+
 
 
 
