@@ -204,9 +204,6 @@ h2 {
     text-align: center; /* Optional: center align the text */
     margin-bottom: 1em; /* Optional: space below the header */
 }
-#schedule {
-	text-align: center; /* Optional: center align the text */
-}
 
 #schedule h2{
 	color: #2e3842
@@ -216,11 +213,15 @@ h2 {
     margin-bottom: 1em; /* Optional: space below the header */
 }
 
+#schedule {
+    text-align: center;
+}
+
 .timeline {
     display: grid;
-    grid-template-columns: 1fr 2fr 3.5fr; /* Increase space between time and event column */
-    gap: 1rem;
-    align-items: center;
+    grid-template-columns: 1fr 2fr 3fr; /* Three columns: dot, time, event */
+    gap: 1rem; /* Spacing between columns */
+    align-items: center; /* Vertically align items */
     margin-top: 2rem;
 }
 
@@ -231,7 +232,7 @@ h2 {
 /* Styling for the dot (first column) */
 .dot {
     width: 10px;
-    height: 10px; /* Keep the dot small */
+    height: 10px;
     background-color: black; /* Dot color */
     border-radius: 50%; /* Make it circular */
     margin: auto;
@@ -242,10 +243,10 @@ h2 {
 .dot::after {
     content: "";
     width: 2px;
-    height: 30px; /* Adjust height of the line between dots */
+    height: 100%; /* Full height to connect dots */
     background-color: black; /* Line color */
     position: absolute;
-    top: 100%; /* Position below the dot */
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -254,7 +255,6 @@ h2 {
 .time-slot:last-child .dot::after {
     display: none;
 }
-
 
 /* Styling for the time (second column) */
 .time {
@@ -275,31 +275,6 @@ h2 {
     font-size: 1.25em;
 }
 
-
-/* Event Column */
-.event {
-    text-align: left;
-    font-size: 1.1em;
-    color: #2e3842;
-    font-weight: normal; /* Remove bold */
-    text-transform: none; /* Remove capitalization */
-}
-
-.event h3 {
-    margin: 0;
-    font-size: 1.1em; /* Adjust to desired size */
-    font-weight: normal; /* Remove bold */
-    text-transform: none; /* Remove capitalization */
-}
-
-/* Time Column */
-.time {
-    text-align: right;
-    font-size: 1.1em; /* Adjust to match event size */
-    color: #2e3842;
-    font-weight: normal; /* Remove bold */
-    text-transform: none; /* Remove capitalization */
-}
 
 
 
