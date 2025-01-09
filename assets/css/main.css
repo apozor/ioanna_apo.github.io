@@ -218,9 +218,9 @@ h2 {
 
 .timeline {
     display: grid;
-    grid-template-columns: 1fr 2fr 3fr; /* Three columns: dot, time, event */
-    gap: 1rem; /* Spacing between columns */
-    align-items: center; /* Vertically align items */
+    grid-template-columns: 1fr 2fr 3.5fr; /* Increase space between time and event column */
+    gap: 1rem;
+    align-items: center;
     margin-top: 2rem;
 }
 
@@ -231,7 +231,7 @@ h2 {
 /* Styling for the dot (first column) */
 .dot {
     width: 10px;
-    height: 100%; /* Make the dot expand vertically within its grid cell */
+    height: 10px; /* Keep the dot small */
     background-color: black; /* Dot color */
     border-radius: 50%; /* Make it circular */
     margin: auto;
@@ -242,10 +242,10 @@ h2 {
 .dot::after {
     content: "";
     width: 2px;
-    height: 100%; /* Full height to connect dots */
+    height: 30px; /* Adjust height of the line between dots */
     background-color: black; /* Line color */
     position: absolute;
-    top: 100%;
+    top: 100%; /* Position below the dot */
     left: 50%;
     transform: translateX(-50%);
 }
