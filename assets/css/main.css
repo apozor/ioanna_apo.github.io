@@ -272,7 +272,9 @@ h2 {
 
 .event h3 {
     margin: 0;
-    font-size: 1.25em;
+    font-size: 1.1em;
+	font-weight: normal;
+    text-transform: none; /* Ensure text is not capitalized */
 }
 
 /* Time Column */
