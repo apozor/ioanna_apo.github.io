@@ -237,24 +237,23 @@ h2 {
     position: relative;
 }
 
-.dot-line:before {
-    content: "";
+.dot-line .dot {
     width: 10px;
     height: 10px;
-    background-color: #2e3842; /* Blue dot */
+    background-color: #2e3842; /* Dot color */
     border-radius: 50%;
-    position: relative;
     z-index: 2;
 }
 
-.dot-line:after {
+.timeline::before {
     content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
     width: 2px;
     height: 100%;
-    background-color: #2e3842; /* Connecting line */
-    position: absolute;
-    top: 10px;
-    z-index: 1;
+    background-color: #2e3842; /* Connecting line color */
+    z-index: 0;
 }
 
 .time-slot:last-child .dot-line:after {
