@@ -197,10 +197,21 @@ h2 {
     margin-bottom: 1em; /* Optional: space below the header */
 }
 
-#schedule {
-    text-align: center;
+#rsvp h2 {
+	color: #2e3842
+    font-family: 'Dancing Script', cursive; /* Apply Dancing Script font only to h2 in #one section */
+    font-size: 2.0em;  /* Adjust the size as needed */
+    text-align: center; /* Optional: center align the text */
+    margin-bottom: 1em; /* Optional: space below the header */
 }
 
+#schedule h2 {
+	color: #2e3842
+    font-family: 'Dancing Script', cursive; /* Apply Dancing Script font only to h2 in #one section */
+    font-size: 2.0em;  /* Adjust the size as needed */
+    text-align: center; /* Optional: center align the text */
+    margin-bottom: 1em; /* Optional: space below the header */
+}
 .timeline {
     display: grid;
     grid-template-columns: auto 1fr auto; /* Three columns: dot-line, event, time */
