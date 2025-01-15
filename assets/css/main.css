@@ -2200,7 +2200,7 @@ pre code {
 	#photos .photo-gallery {
 		display: flex; /* Arrange the photos side by side */
 		justify-content: center; /* Center the photos horizontally */
-		gap: 1rem; /* Add space between the photos */
+		gap: 0.5rem; /* Add space between the photos */
 		flex-wrap: wrap; /* Allow wrapping if screen size is small */
 		margin-top: 1rem; /* Add space above the gallery */
 	}
@@ -2211,8 +2211,11 @@ pre code {
 		height: 300px; /* Limit the height to a smaller value */
 		/*height: auto; /* Limit the height to a smaller value */
 		object-fit: contain; /* Ensure the entire image is visible */
-		border-radius: none; /* Optional: Add rounded corners */
+		border: none; /* Ensure no border is applied */
 		box-shadow: none; /* Optional: Add a subtle shadow */
+		margin: 0; /* Remove any additional spacing */
+    	padding: 0; /* Ensure no padding is creating a frame effect */
+    	border-radius: 0; /* Ensure no rounding of corners */
 	}
 	.image {
 		border-radius: 3px;
