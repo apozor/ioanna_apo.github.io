@@ -2211,8 +2211,8 @@ pre code {
 		height: 300px; /* Limit the height to a smaller value */
 		/*height: auto; /* Limit the height to a smaller value */
 		object-fit: contain; /* Ensure the entire image is visible */
-		border-radius: 8px; /* Optional: Add rounded corners */
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+		border-radius: none; /* Optional: Add rounded corners */
+		box-shadow: none; /* Optional: Add a subtle shadow */
 	}
 	.image {
 		border-radius: 3px;
