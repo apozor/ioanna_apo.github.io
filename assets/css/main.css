@@ -1923,7 +1923,11 @@ pre code {
 	form {
 		margin: 0 0 2em 0;
 	}
-
+	
+	form .actions {
+		margin-top: 1rem; /* Adjust the space between the last input field and the submit button */
+	}
+	
 	label {
 		color: #fff;
 		display: block;
