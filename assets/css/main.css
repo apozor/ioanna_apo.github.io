@@ -3981,6 +3981,15 @@ pre code {
 			}
 
 		}
+		
+		#cta .actions {
+			margin-top: 1rem; /* Add space between the text and button */
+		}
+		
+		#cta .button {
+			display: block; /* Ensure the button spans the full width on small screens */
+			margin: 0 auto; /* Center the button */
+		}
 
 /* Main Header - Remove background image */
 #main > header {
