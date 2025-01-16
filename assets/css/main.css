@@ -1927,7 +1927,7 @@ pre code {
 	form .actions {
 		margin-top: 1rem; /* Adjust the space between the last input field and the submit button */
 	}
-	
+
 	label {
 		color: #fff;
 		display: block;
@@ -3769,16 +3769,13 @@ pre code {
 				position: absolute;
 				width: 100%;
 			}
-
-			#banner h2:before {
-				top: 0;
-				left: 0;
-			}
-
+			
+			#banner h2:before,
 			#banner h2:after {
-				bottom: 0;
-				right: 0;
+				content: ''; /* Retain the pseudo-element */
+				display: none; /* Hide the pseudo-elements to remove underlines */
 			}
+}
 
 		#banner p {
 			color: #2e3842;
@@ -3856,7 +3853,19 @@ pre code {
 			top: 0;
 			opacity: 0;
 		}
+		#banner .photo-gallery {
+			display: flex; /* Align photos in a row */
+			justify-content: center; /* Center the photos */
+			gap: 1rem; /* Add space between photos */
+			margin-top: 1rem; /* Space between the date and photos */
+		}
 
+		#banner .photo-gallery img {
+			max-width: 30%; /* Adjust photo size */
+			height: auto; /* Maintain aspect ratio */
+			border-radius: 5px; /* Optional: Add rounded corners */
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+		}
 		@media screen and (max-width: 736px) {
 
 			#banner {
