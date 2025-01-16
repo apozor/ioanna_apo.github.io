@@ -3772,10 +3772,11 @@ pre code {
 			
 			#banner h2:before,
 			#banner h2:after {
-				content: ''; /* Retain the pseudo-element */
-				display: none; /* Hide the pseudo-elements to remove underlines */
+				content: '';
+				background: none;
+				height: 0;
+				width: 0;
 			}
-}
 
 		#banner p {
 			color: #2e3842;
