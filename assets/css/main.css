@@ -4026,6 +4026,14 @@ pre code {
     }
 }
 
+@media (max-width: 768px) {
+    p {
+        word-wrap: break-word;
+        white-space: normal;
+        line-height: 1.5;
+    }
+}
+
 @media screen and (max-width: 1280px) {
     #main > header {
         padding: 8em 3em 6em 3em;
