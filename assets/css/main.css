@@ -3986,11 +3986,16 @@ pre code {
 			margin-top: 1rem; /* Add space between the text and button */
 		}
 		
-		#cta .button {
-			display: block; /* Ensure the button spans the full width on small screens */
-			margin: 0 auto; /* Center the button */
+		
+		#cta .button-container {
+			margin-top: 1.5rem; /* Add spacing above the button */
+			text-align: center; /* Center the button horizontally */
 		}
-
+		
+		#cta .button {
+			display: inline-block; /* Ensure proper inline display */
+			width: auto; /* Let the button width adjust naturally */
+		}
 /* Main Header - Remove background image */
 #main > header {
     background-image: none; /* Remove the background image */
