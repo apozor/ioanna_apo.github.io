@@ -24,6 +24,23 @@
 			#one p {
 				text-align: center;
 			}
+			
+			/* Language Switcher */
+			.language-switcher {
+				text-align: right;
+				margin-top: 10px;
+				padding-right: 20px;
+			}
+			.language-switcher button {
+				background-color: #fff;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				padding: 5px 10px;
+				cursor: pointer;
+			}
+			.language-switcher button:hover {
+				background-color: #f0f0f0;
+			}
 		</style>
 
 		<!-- Password Protection Script -->
@@ -80,6 +97,11 @@
 				<!-- Header -->
 					<header id="header" class="alt">
 						<h1><a href="index.html">Ioanna & Apostolos</a></h1>
+						 <!-- Language Switcher -->
+						<div class="language-switcher">
+							<button id="english-button">English</button>
+							<button id="greek-button">Ελληνικά</button>
+						</div>
 					</header>
 					
 					<style>
@@ -108,8 +130,28 @@
 					<p href="#one" class="more scrolly">Learn More</p>
 				</section>
 				
-				<!-- Love story -->
-				
+				<!-- Invitation -->
+					<section id="one" class="wrapper style1 special">
+						<div class="inner">
+							<header class="major">			
+								<h2 class="translatable" data-lang="en">You are invited</h2>
+								<h2 class="translatable" data-lang="gr" style="display: none;">Είστε καλεσμένοι</h2>
+								<p class="translatable" data-lang="en">
+									After 10 amazing years together, Apostolos finally decided that Ioanna is the one (it only took a decade, but who’s counting?) and proposed during an unforgettable trip to Iceland.<br />
+									The wedding will take place in Munich on April 4th, as a private event for family only.<br />
+									We are excited to invite you to join us as we celebrate this special moment in Thessaloniki—the city where it all began—on <b>June 8th at 18:00</b>. We can’t wait to see you there!
+								</p>
+								<p class="translatable" data-lang="gr" style="display: none;">
+									Μετά από 10 υπέροχα χρόνια μαζί, ο Απόστολος αποφάσισε ότι η Ιωάννα είναι η μία και μοναδική (του πήρε μόνο μια δεκαετία, αλλά ποιος μετράει;) και της έκανε πρόταση κατά τη διάρκεια ενός αξέχαστου ταξιδιού στην Ισλανδία.<br />
+									Ο γάμος θα γίνει στο Μόναχο στις 4 Απριλίου, ως ιδιωτική εκδήλωση μόνο για την οικογένεια.<br />
+									Είμαστε ενθουσιασμένοι που σας προσκαλούμε να γιορτάσετε αυτήν τη ξεχωριστή στιγμή στη Θεσσαλονίκη—την πόλη όπου όλα ξεκίνησαν—στις <b>8 Ιουνίου στις 18:00</b>. Ανυπομονούμε να σας δούμε εκεί!
+								</p>
+							</header>
+						</div>
+					</section>
+	
+
+
 					<section id="one" class="wrapper style1 special">
 						<div class="inner">
 							<header class="major">			
@@ -326,6 +368,28 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
+			<script>
+				document.addEventListener("DOMContentLoaded", () => {
+					const languageButtons = document.querySelectorAll(".language-switcher button");
+					const translatableElements = document.querySelectorAll(".translatable");
+
+					languageButtons.forEach((button) => {
+						button.addEventListener("click", () => {
+							const selectedLang = button.id === "english-button" ? "en" : "gr";
+
+							// Toggle visibility of translatable elements
+							translatableElements.forEach((element) => {
+								if (element.getAttribute("data-lang") === selectedLang) {
+									element.style.display = ""; // Show selected language
+								} else {
+									element.style.display = "none"; // Hide other languages
+								}
+							});
+						});
+					});
+				});
+			</script>
 
 			<script>
 				document.addEventListener("DOMContentLoaded", () => {
