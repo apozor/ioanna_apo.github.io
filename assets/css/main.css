@@ -2799,7 +2799,6 @@ pre code {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		flex-direction: column; /* Stack items vertically */
 	}
 
 		.spotlight .image {
@@ -2914,21 +2913,6 @@ pre code {
 				padding: 3em 2em 1em 2em ;
 			}
 
-		}
-		@media screen and (max-width: 980px) {
-			.spotlight {
-				display: flex;
-				flex-direction: column;
-			}
-		
-			.spotlight .image,
-			.spotlight .content {
-				width: 100%;
-			}
-		
-			.spotlight .image {
-				margin-top: 1.5em;
-			}
 		}
 
 /* Wrapper */
@@ -3747,6 +3731,7 @@ pre code {
 		position: relative;
 		text-align: center;
 	}
+	
 
 		#banner h2 {
 			color: #2e3842; /* Dark blue color */
@@ -3766,6 +3751,10 @@ pre code {
 			border: none; /* Ensure no borders are applied */
 			position: relative;
 			z-index: 1;
+		}
+		
+		#banner .inner h2 {
+			margin-top: 2em; /* Adjust the top margin to push the text down */
 		}
 
 			#banner h2:before, #banner h2:after {
@@ -3878,7 +3867,8 @@ pre code {
 		}
 
 		#banner .photo-gallery img {
-			max-width: 30%; /* Adjust photo size */
+			max-width: 32%; /* Adjust photo size */
+			max-height: 150px; /* Adjust the max height as needed */
 			height: auto; /* Maintain aspect ratio */
 			border-radius: 5px; /* Optional: Add rounded corners */
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
