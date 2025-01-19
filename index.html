@@ -174,7 +174,7 @@
 						<div class="image"><img src="images/love_story.jpg" alt="" /></div>
 						<div class="content">
 							<h2 class="translatable" data-lang="en" style="text-align: center;">Wedding Venue</h2>
-							<h2 class="translatable" data-lang="gr" style="display: none; text-align: center;">Τοποθεσία Γάμου</h2>
+							<h2 class="translatable" data-lang="gr" style="display: none; text-align: center;">Wedding Venue</h2>
 							<p class="translatable" data-lang="en" style="text-align: center;">
 								The wedding celebration will take place at <a href="https://maps.app.goo.gl/k7ggAafEP6fKCtPo7" target="_blank" rel="noopener noreferrer"><b>Ktima Christidi in Ano Peraia</b></a>.<br />
 								We’re planning to be outdoors, so we can all enjoy the stunning surroundings. To get there, you’ll likely need a car or a taxi. As the big day approaches, we’ll do our best to provide contact details for local drivers to make your journey easier.<br />
@@ -271,56 +271,84 @@
 					<!-- RSVP Section -->
 					<section id="rsvp" class="wrapper style1 special">
 						<div class="inner">
-							<header class="major">
-								<h2 class="translatable" data-lang="en">RSVP</h2>
-								<h2 class="translatable" data-lang="gr" style="display: none;">RSVP</h2>
-								<p class="translatable" data-lang="en" style="text-align: center;">
-									Gondor calls for aid... and we need your RSVP to join us in celebration!<br />
-									Please let us know if you can join us by the end of February. Your reply will help us make sure that everything is ready for a fantastic celebration.
-								</p>
-								<p class="translatable" data-lang="gr" style="display: none; text-align: center;">
-									Η Γκόντορ ζητάει βοήθεια... και χρειαζόμαστε την απάντησή σας για να γιορτάσουμε μαζί!<br />
-									Παρακαλούμε ενημερώστε μας αν μπορείτε να παρευρεθείτε μέχρι το τέλος Φεβρουαρίου. Η απάντησή σας θα μας βοηθήσει να διασφαλίσουμε ότι όλα είναι έτοιμα για μια φανταστική γιορτή.
-								</p>
-							</header>
-							<form action="https://formspree.io/f/meoopqdq" method="POST">
-								<div class="fields">
-									<div class="field">
-										<label class="translatable" data-lang="en" for="name">Name</label>
-										<label class="translatable" data-lang="gr" for="name" style="display: none;">Όνομα</label>
-										<input type="text" id="name" name="name" placeholder="Your Name" required />
+							<!-- English RSVP Form -->
+							<div id="rsvp-en" class="rsvp-form" lang="en">
+								<header class="major">
+									<h2>RSVP</h2>
+									<p style="text-align: center;">
+										Gondor calls for aid... and we need your RSVP to join us in celebration!<br />
+										Please let us know if you can join us by the end of February. Your reply will help us make sure that everything is ready for a fantastic celebration.
+									</p>
+								</header>
+								<form action="https://formspree.io/f/meoopqdq" method="POST">
+									<div class="fields">
+										<div class="field">
+											<label for="name">Name</label>
+											<input type="text" id="name" name="name" placeholder="Your Name" required />
+										</div>
+										<div class="field">
+											<label for="attendance">Will you attend?</label>
+											<select id="attendance" name="attendance" required>
+												<option value="" disabled selected>-- Select an option --</option>
+												<option value="Yes let's party!">Yes, let's party!</option>
+												<option value="Sorry, next time!">Sorry, next time!</option>
+											</select>
+										</div>
+										<div class="field">
+											<label for="plus one">Other participants</label>
+											<textarea id="plus one" name="plus one" placeholder="If your partner and/or children are invited, please add their name(s) as well. One RSVP form is enough."></textarea>
+										</div>
+										<div class="field">
+											<label for="questions">Questions?</label>
+											<textarea id="questions" name="questions" placeholder="Any special request/comment?"></textarea>
+										</div>
 									</div>
-									<div class="field">
-										<label class="translatable" data-lang="en" for="attendance">Will you attend?</label>
-										<label class="translatable" data-lang="gr" for="attendance" style="display: none;">Θα παρευρεθείτε;</label>
-										<select id="attendance" name="attendance" required>
-											<option value="" disabled selected>-- Select an option --</option>
-											<option class="translatable" data-lang="en">Yes, let's party!</option>
-											<option class="translatable" data-lang="en">Sorry, next time!</option>
-											<option class="translatable" data-lang="gr" style="display: none;">Ας παρτάρουμε!</option>
-											<option class="translatable" data-lang="gr" style="display: none;">Λυπάμαι, την επόμενη φορά!</option>
-										</select>
+									<ul class="actions special">
+										<li><button type="submit" class="button primary">Submit</button></li>
+									</ul>
+								</form>
+							</div>
+					
+							<!-- Greek RSVP Form -->
+							<div id="rsvp-gr" class="rsvp-form" lang="gr" style="display: none;">
+								<header class="major">
+									<h2>RSVP</h2>
+									<p style="text-align: center;">
+										Η Γκόντορ ζητάει βοήθεια... και χρειαζόμαστε την απάντησή σας για να γιορτάσουμε μαζί!<br />
+										Παρακαλούμε ενημερώστε μας αν μπορείτε να παρευρεθείτε μέχρι το τέλος Φεβρουαρίου. Η απάντησή σας θα μας βοηθήσει να διασφαλίσουμε ότι όλα είναι έτοιμα για μια φανταστική γιορτή.
+									</p>
+								</header>
+								<form action="https://formspree.io/f/meoopqdq" method="POST">
+									<div class="fields">
+										<div class="field">
+											<label for="name">Όνομα</label>
+											<input type="text" id="name" name="name" placeholder="Το Όνομά σας" required />
+										</div>
+										<div class="field">
+											<label for="attendance">Θα παρευρεθείτε;</label>
+											<select id="attendance" name="attendance" required>
+												<option value="" disabled selected>-- Επιλέξτε μια επιλογή --</option>
+												<option value="Ναι, πάμε για πάρτι!">Ας παρτάρουμε!</option>
+												<option value="Λυπάμαι, την επόμενη φορά!">Λυπάμαι, την επόμενη φορά!</option>
+											</select>
+										</div>
+										<div class="field">
+											<label for="plus one">Άλλοι παρευρισκόμενοι</label>
+											<textarea id="plus one" name="plus one" placeholder="Αν ο/η σύντροφός σας ή/και τα παιδιά σας είναι προσκεκλημένα, προσθέστε και τα δικά τους ονόματα. Αρκεί μία φόρμα RSVP."></textarea>
+										</div>
+										<div class="field">
+											<label for="questions">Ερωτήσεις;</label>
+											<textarea id="questions" name="questions" placeholder="Οποιοδήποτε ειδικό αίτημα/σχόλιο;"></textarea>
+										</div>
 									</div>
-									<div class="field">
-										<label class="translatable" data-lang="en" for="plus one">Other participants</label>
-										<label class="translatable" data-lang="gr" for="plus one" style="display: none;">Άλλοι παρευρισκόμενοι</label>
-										<textarea id="plus one" name="plus one" placeholder="If your partner and/or children are invited, please add their name(s) as well. One RSVP form is enough."></textarea>
-									</div>
-									<div class="field">
-										<label class="translatable" data-lang="en" for="questions">Questions?</label>
-										<label class="translatable" data-lang="gr" for="questions" style="display: none;">Ερωτήσεις;</label>
-										<textarea id="questions" name="questions" placeholder="Any special request/comment?"></textarea>
-									</div>
-								</div>
-								<ul class="actions special">
-									<li>
-										<button type="submit" class="button primary translatable" data-lang="en">Submit</button>
-										<button type="submit" class="button primary translatable" data-lang="gr" style="display: none;">Υποβολή</button>
-									</li>
-								</ul>
-							</form>
+									<ul class="actions special">
+										<li><button type="submit" class="button primary">Υποβολή</button></li>
+									</ul>
+								</form>
+							</div>
 						</div>
 					</section>
+					
 					
 
 					<!--<section id="schedule" class="wrapper style1 special">
@@ -544,7 +572,19 @@
 					});
 				});
 			</script>
-
+		
+			<script>
+				document.addEventListener("DOMContentLoaded", () => {
+					// Check the user's language or page setting
+					const userLang = document.documentElement.lang || navigator.language;
+					const isGreek = userLang.startsWith("el");
+				
+					// Toggle visibility of forms
+					document.getElementById("rsvp-en").style.display = isGreek ? "none" : "block";
+					document.getElementById("rsvp-gr").style.display = isGreek ? "block" : "none";
+				});
+			</script>
+			
 			<script>
 				document.addEventListener("DOMContentLoaded", () => {
 					const timeSlots = document.querySelectorAll(".time-slot");
