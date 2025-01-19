@@ -137,7 +137,7 @@ body, input, select, textarea {
 }
 @media screen and (max-width: 1280px) {
 	h2 {
-	  font-size: 3rem;  /* Increase the font size for mobile devices */
+	  font-size: 3em;  /* Increase the font size for mobile devices */
 	}
   }
 /* Links styles */
@@ -294,8 +294,8 @@ h2 {
 /* For small screens */
 @media screen and (max-width: 736px) {
     h2 {
-        font-size: 1.1em;
-        line-height: 1.65em;
+        font-size: 1.5em;
+        line-height: 1.75em;
     }
 }
 
@@ -3893,7 +3893,7 @@ pre code {
 			}
 
 				#banner h2 {
-					font-size: 3em;
+					font-size: 2em;
 				}
 				
 
@@ -4103,7 +4103,7 @@ pre code {
     }
 
     #main > header h2 {
-        font-size: 1.25em;
+        font-size: 1.5em;
         margin: 0 0 1em 0;
     }
 }
