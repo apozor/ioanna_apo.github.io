@@ -2790,6 +2790,14 @@ pre code {
 
 /* Spotlight */
 
+	#spotlight h2 {
+		color: #2e3842
+		font-family: 'Dancing Script', cursive; /* Apply Dancing Script font only to h2 in #one section */
+		font-size: 1.5em;  /* Adjust the size as needed */
+		text-align: center; /* Optional: center align the text */
+		margin-bottom: 1em; /* Optional: space below the header */
+	}
+
 	.spotlight {
 		-moz-align-items: center;
 		-webkit-align-items: center;
@@ -2800,7 +2808,7 @@ pre code {
 		display: -ms-flex;
 		display: flex;
 	}
-
+	
 		.spotlight .image {
 			-moz-order: 1;
 			-webkit-order: 1;
