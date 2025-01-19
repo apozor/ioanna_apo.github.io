@@ -2806,6 +2806,7 @@ pre code {
 			-webkit-order: 1;
 			-ms-order: 1;
 			order: 1;
+			padding: 0 1em; /* Add horizontal padding */
 			border-radius: 0;
 			width: 40%;
 		}
@@ -3747,7 +3748,7 @@ pre code {
 		}
 		
 		#banner .inner h2 {
-			margin-top: 2em; /* Adjust the top margin to push the text down */
+			margin-top: 4em; /* Adjust the top margin to push the text down */
 		}
 
 			#banner h2:before, #banner h2:after {
