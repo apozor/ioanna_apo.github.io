@@ -2799,6 +2799,7 @@ pre code {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
+		flex-direction: column; /* Stack items vertically */
 	}
 
 		.spotlight .image {
@@ -2913,6 +2914,21 @@ pre code {
 				padding: 3em 2em 1em 2em ;
 			}
 
+		}
+		@media screen and (max-width: 980px) {
+			.spotlight {
+				display: flex;
+				flex-direction: column;
+			}
+		
+			.spotlight .image,
+			.spotlight .content {
+				width: 100%;
+			}
+		
+			.spotlight .image {
+				margin-top: 1.5em;
+			}
 		}
 
 /* Wrapper */
