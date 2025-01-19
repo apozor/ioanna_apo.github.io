@@ -2884,6 +2884,10 @@ pre code {
 
 
 		@media screen and (max-width: 1280px) {
+			
+			#spotlight h2 {
+				font-size: 1.5em; /* Explicitly restating for mobile */
+			}
 
 			.spotlight .image {
 				width: 45%;
@@ -3885,7 +3889,7 @@ pre code {
 			}
 
 				#banner h2 {
-					font-size: 2.75em;
+					font-size: 1.5em;
 				}
 				
 
