@@ -2823,6 +2823,8 @@ pre code {
 			order: 2;
 			max-width: 48em;
 			width: 60%;
+			background-color: #dfdfdf;
+			color: #2e3842;
 		}
 
 		.spotlight:nth-child(2n) {
@@ -3859,7 +3861,6 @@ pre code {
 
 		#banner .photo-gallery img {
 			max-width: 32%; /* Adjust photo size */
-			max-height: 350px; /* Adjust the max height as needed */
 			height: auto; /* Maintain aspect ratio */
 			border-radius: 5px; /* Optional: Add rounded corners */
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
