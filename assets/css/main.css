@@ -3947,9 +3947,9 @@ pre code {
 	}
 
 	#cta .button {
-		margin-top: 1em; /* Add spacing above the button */
-		display: inline-block; /* Ensure proper inline display */
-		width: auto; /* Let the button width adjust naturally */
+		display: block; /* Ensure the button behaves like a block element */
+		margin: 1em auto; /* Center the button horizontally with auto margins */
+		text-align: center; /* Align text within the button */
 	}
 
 	#cta .inner {
