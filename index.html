@@ -46,7 +46,7 @@
 		<!-- Password Protection Script -->
 		<script>
 			// Set the list of allowed passwords
-			var allowedPasswords = ["Ia", "Ia ", "Ia25 ", "Ia25", "Mellon", "mellon", "Ioanna", "Apostolos", "apostolos","Apo", "apo", "ioanna", "Ιωάννα", "Απόστολος", "απόστολος", "ιωάννα", "Ζορμπάς", "Κακουλίδου", "κακουλίδου", "ζορμπάς"]; // Add possible passwords
+			var allowedPasswords = ["Ia", "Ia ", "Ia25 ", "Ia25", "Mellon", "mellon", "Ioanna", "Apostolos", "apostolos","Apo", "apo", "ioanna", "Ιωάννα", "Απόστολος", "απόστολος", "ιωάννα", "Ζορμπάς", "Κακουλίδου", "κακουλίδου", "ζορμπάς", "filos", "φίλος", "Φίλος", "φιλος"]; // Add possible passwords
 			var maxAttempts = 3; // Set the maximum number of allowed attempts
 			var attempts = 0; // Initialize the attempt counter
 		  
@@ -553,24 +553,26 @@
 			
 			<script>
 				document.addEventListener("DOMContentLoaded", () => {
-					const languageButtons = document.querySelectorAll(".language-switcher button");
-					const translatableElements = document.querySelectorAll(".translatable");
+					const toggleButton = document.getElementById("language-toggle");
+					const greekContent = document.getElementById("rsvp-gr");
+					const englishContent = document.getElementById("rsvp-en");
 
-					languageButtons.forEach((button) => {
-						button.addEventListener("click", () => {
-							const selectedLang = button.id === "english-button" ? "en" : "gr";
+					// Initialize based on the current language
+					let isGreek = document.documentElement.lang === "el";
+					updateContent();
 
-							// Toggle visibility of translatable elements
-							translatableElements.forEach((element) => {
-								if (element.getAttribute("data-lang") === selectedLang) {
-									element.style.display = ""; // Show selected language
-								} else {
-									element.style.display = "none"; // Hide other languages
-								}
-							});
-						});
+					toggleButton.addEventListener("click", () => {
+						isGreek = !isGreek;
+						updateContent();
 					});
+
+					function updateContent() {
+						greekContent.style.display = isGreek ? "block" : "none";
+						englishContent.style.display = isGreek ? "none" : "block";
+						toggleButton.textContent = isGreek ? "English" : "Ελληνικά";
+					}
 				});
+
 			</script>
 		
 			<script>
@@ -584,7 +586,7 @@
 					document.getElementById("rsvp-gr").style.display = isGreek ? "block" : "none";
 				});
 			</script>
-			
+
 			<script>
 				document.addEventListener("DOMContentLoaded", () => {
 					const timeSlots = document.querySelectorAll(".time-slot");
