@@ -2218,13 +2218,19 @@ pre code {
 		gap: 0.5rem; /* Add space between the photos */
 		flex-wrap: wrap; /* Allow wrapping if screen size is small */
 		margin-top: 1rem; /* Add space above the gallery */
+		object-fit: contain; /* Ensures the entire image is shown without cropping */
+		width: 100%; /* Scale image to fit the container width */
+		height: auto; /* Maintain aspect ratio */
 	}
 
 	#photos .photo-gallery img {
 		max-width: 100%; /* Ensure photos are responsive */
 		width: 30%; /* Set each photo to occupy a third of the container width */
-		/*height: 300px; /* Limit the height to a smaller value */
-		max-height: 550px;
+		/*height: 250px; /* Limit the height to a smaller value */
+		/*max-height: 550px;
+		object-fit: contain; /* Ensures the entire image is shown without cropping */
+		height: auto; /* Maintain aspect ratio */
+		display: block; /* Prevent inline spacing issues */
 		/*height: auto; /* Limit the height to a smaller value */
 		object-fit: contain; /* Ensure the entire image is visible */
 		border: none; /* Ensure no border is applied */

@@ -113,7 +113,7 @@
 						<h1><a href="index.html">Ioanna & Apostolos</a></h1>
 						 <!-- Language Switcher -->
 						  <!-- Language Toggle Button -->
-    					<button id="language-toggle" style="margin: 10px; padding: 10px;">Switch to Greek</button>
+						<button id="languageToggle" class="language-toggle">Ελληνικά-English</button>
 					</header>
 					
 					<style>
@@ -562,6 +562,37 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
+			<script>
+				// Set the initial language
+				let currentLanguage = 'en'; // Default to English
+			
+				// Language toggle logic
+				document.getElementById('languageToggle').addEventListener('click', function () {
+					// Toggle language
+					if (currentLanguage === 'en') {
+						document.body.setAttribute('lang', 'el'); // Switch to Greek
+						this.textContent = 'Switch to English';
+						currentLanguage = 'el';
+					} else {
+						document.body.setAttribute('lang', 'en'); // Switch to English
+						this.textContent = 'Switch to Greek';
+						currentLanguage = 'en';
+					}
+			
+					// Show/Hide language-specific sections
+					document.querySelectorAll('[lang="en"]').forEach(el => {
+						el.style.display = currentLanguage === 'en' ? 'block' : 'none';
+					});
+					document.querySelectorAll('[lang="el"]').forEach(el => {
+						el.style.display = currentLanguage === 'el' ? 'block' : 'none';
+					});
+				});
+			
+				// Initialize display
+				document.querySelectorAll('[lang="en"]').forEach(el => el.style.display = 'block');
+				document.querySelectorAll('[lang="el"]').forEach(el => el.style.display = 'none');
+			</script>
 			
 			<script>
 				document.addEventListener("DOMContentLoaded", () => {
