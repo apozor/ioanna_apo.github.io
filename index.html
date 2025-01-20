@@ -46,46 +46,60 @@
 		<!-- Password Protection Script -->
 		<script>
 			// Set the list of allowed passwords
-			var allowedPasswords = ["Ia", "Ia ", "Ia25 ", "Ia25", "Mellon", "mellon", "Ioanna", "Apostolos", "apostolos","Apo", "apo", "ioanna", "Ιωάννα", "Απόστολος", "απόστολος", "ιωάννα", "Ζορμπάς", "Κακουλίδου", "κακουλίδου", "ζορμπάς", "filos", "φίλος", "Φίλος", "φιλος"]; // Add possible passwords
+			var allowedPasswords = [
+				"Ia", "Ia ", "Ia25 ", "Ia25", "Mellon", "mellon", "Ioanna", 
+				"Apostolos", "apostolos", "Apo", "apo", "ioanna", "Ιωάννα", 
+				"Απόστολος", "απόστολος", "ιωάννα", "Ζορμπάς", "Κακουλίδου", 
+				"κακουλίδου", "ζορμπάς", "filos", "φίλος", "Φίλος", "φιλος"
+			]; // Add possible passwords
 			var maxAttempts = 3; // Set the maximum number of allowed attempts
 			var attempts = 0; // Initialize the attempt counter
-		  
+		
 			// Function to prompt for the password
 			function checkPassword() {
-			  // Prompt the user for a password
-			  var enteredPassword = prompt("Speak friend and enter:");
-		  
-			  // Convert the entered password and allowed passwords to lowercase for case-insensitive comparison
-			  var enteredPasswordLower = enteredPassword.toLowerCase();
-			  var allowedPasswordsLower = allowedPasswords.map(function(password) {
-				return password.toLowerCase();
-			  });
-		  
-			  // Check if the entered password is in the list of allowed passwords
-			  if (allowedPasswordsLower.includes(enteredPasswordLower)) {
-				return true; // Correct password
-			  } else {
-				attempts++; // Increment the attempt counter
-				if (attempts >= maxAttempts) {
-				  alert("Incorrect password. Too many attempts.");
-				  window.location.href = "about:blank"; // Redirect to a blank page after max attempts
-				  return false;
-				} else {
-				  alert("Incorrect password. You have " + (maxAttempts - attempts) + " attempts left.");
-				  return false;
+				// Prompt the user for a password
+				var enteredPassword = prompt("Speak friend and enter:");
+		
+				// Handle the case where the user clicks "Cancel" (enteredPassword is null)
+				if (enteredPassword === null) {
+					alert("You must enter the password to access this page.");
+					return false;
 				}
-			  }
+		
+				// Convert the entered password and allowed passwords to lowercase for case-insensitive comparison
+				var enteredPasswordLower = enteredPassword.toLowerCase();
+				var allowedPasswordsLower = allowedPasswords.map(function(password) {
+					return password.toLowerCase();
+				});
+		
+				// Check if the entered password is in the list of allowed passwords
+				if (allowedPasswordsLower.includes(enteredPasswordLower)) {
+					return true; // Correct password
+				} else {
+					attempts++; // Increment the attempt counter
+					if (attempts >= maxAttempts) {
+						alert("Incorrect password. Too many attempts.");
+						window.location.href = "about:blank"; // Redirect to a blank page after max attempts
+						return false;
+					} else {
+						alert("Incorrect password. You have " + (maxAttempts - attempts) + " attempts left.");
+						return false;
+					}
+				}
 			}
-		  
-			// Call the password check function
-			var isAuthenticated = checkPassword();
-			if (!isAuthenticated) {
-			  // Keep prompting until the user enters the correct password or max attempts are reached
-			  while (!isAuthenticated && attempts < maxAttempts) {
+		
+			// Keep prompting until the user enters the correct password or max attempts are reached
+			var isAuthenticated = false;
+			while (!isAuthenticated && attempts < maxAttempts) {
 				isAuthenticated = checkPassword();
-			  }
 			}
-		  </script>
+		
+			// If not authenticated after max attempts, redirect to blank page
+			if (!isAuthenticated) {
+				window.location.href = "about:blank";
+			}
+		</script>
+		
 		  
 
 	</head>

@@ -209,6 +209,15 @@ h2 {
     margin-bottom: 1em; /* Optional: space below the header */
 }
 
+select {
+    background-color: #bec0c0; /* White background */
+    color: #2e3842; /* Black text */
+}
+
+option {
+    background-color: #bec0c0; /* Light gray background */
+    color: #2e3842; /* Dark grayish-blue text */
+}
 #schedule h2 {
     color: #2e3842;
     font-family: 'Dancing Script', cursive;
