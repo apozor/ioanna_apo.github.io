@@ -2240,10 +2240,10 @@ pre code {
 
 	/* Style for images */
 	#photos .photo-gallery img {
-		width: 30%; /* Make images 30% of the container width */
+		width: 31%; /* Make images 30% of the container width */
 		height: auto; /* Keep aspect ratio intact */
 		object-fit: contain; /* Ensure the entire image is visible */
-		max-height: 550px; /* Optional: Set max-height to prevent images from being too tall */
+		max-height: 400px; /* Optional: Set max-height to prevent images from being too tall */
 		display: block;
 		border: none;
 		box-shadow: none;
@@ -3800,9 +3800,6 @@ pre code {
 			z-index: 1;
 		}
 		
-		#banner .inner h2 {
-			margin-top: 2em; /* Adjust the top margin to push the text down */
-		}
 
 			#banner h2:before, #banner h2:after {
 				color: #2e3842; /* Dark blue color */
