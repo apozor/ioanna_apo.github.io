@@ -3943,6 +3943,14 @@ pre code {
 				}
 
 		}
+		
+		@media screen and (max-width: 736px) {
+			#banner .photo-gallery img {
+				max-width: 100%; /* Ensure the images fill the container on smaller screens */
+				height: auto; /* Remove fixed height and keep the aspect ratio intact */
+				object-fit: contain; /* Ensure the image fits inside the container without cropping */
+			}
+		}
 	
 	
 	body.is-preload #banner h2 {
