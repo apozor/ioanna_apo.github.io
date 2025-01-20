@@ -3920,6 +3920,7 @@ pre code {
 		#banner .photo-gallery img {
 			max-width: 32%; /* Adjust photo size */
 			height: auto; /* Maintain aspect ratio */
+			object-position: top;  /* Crop from the top of the image */
 			border-radius: 5px; /* Optional: Add rounded corners */
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
 		}
