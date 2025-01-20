@@ -3799,6 +3799,7 @@ pre code {
 			border: none; /* Ensure no borders are applied */
 			position: relative;
 			z-index: 1;
+			margin-top: 20px; /* Adjust this value to control how much the h2 goes down */
 		}
 		
 
