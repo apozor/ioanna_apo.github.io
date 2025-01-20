@@ -2225,32 +2225,33 @@ pre code {
 /* Image */
 
 	#photos .photo-gallery {
-		display: flex; /* Arrange the photos side by side */
-		justify-content: center; /* Center the photos horizontally */
-		gap: 0.5rem; /* Add space between the photos */
-		flex-wrap: wrap; /* Allow wrapping if screen size is small */
-		margin-top: 1rem; /* Add space above the gallery */
-		object-fit: contain; /* Ensures the entire image is shown without cropping */
-		width: 100%; /* Scale image to fit the container width */
-		height: auto; /* Maintain aspect ratio */
+		display: flex;
+		justify-content: center;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+		margin-top: 1rem;
 	}
 
 	#photos .photo-gallery img {
-		max-width: 100%; /* Ensure photos are responsive */
-		width: 30%; /* Set each photo to occupy a third of the container width */
-		/*height: 250px; /* Limit the height to a smaller value */
-		/*max-height: 550px;
-		object-fit: contain; /* Ensures the entire image is shown without cropping */
-		height: auto; /* Maintain aspect ratio */
-		display: block; /* Prevent inline spacing issues */
-		/*height: auto; /* Limit the height to a smaller value */
-		object-fit: contain; /* Ensure the entire image is visible */
-		border: none; /* Ensure no border is applied */
-		box-shadow: none; /* Optional: Add a subtle shadow */
-		margin: 0; /* Remove any additional spacing */
-    	padding: 0; /* Ensure no padding is creating a frame effect */
-    	border-radius: 0; /* Ensure no rounding of corners */
+		width: 30%; /* Each image will take up about a third of the container width */
+		height: auto; /* Keep aspect ratio intact */
+		object-fit: contain; /* Ensure the entire image is visible without cropping */
+		max-height: 550px; /* Optional: Set max-height if you need to limit image height */
+		display: block;
+		border: none; /* Remove any border */
+		box-shadow: none; /* Optional: Remove any shadow */
+		margin: 0; /* Remove margin */
+		padding: 0; /* Remove padding */
+		border-radius: 0; /* Remove border radius */
 	}
+
+	/* Make sure images resize well on smaller screens */
+	@media (max-width: 768px) {
+		#photos .photo-gallery img {
+			width: 100%; /* Take up full width on smaller screens */
+		}
+	}
+
 	.image {
 		border-radius: 3px;
 		border: 0;
