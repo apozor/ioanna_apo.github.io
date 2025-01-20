@@ -2224,25 +2224,32 @@ pre code {
 
 /* Image */
 
+	/* Ensure proper spacing between the header and the gallery */
+	#photos {
+		margin-top: 120px; /* Adjust this value to push down the gallery */
+	}
+
+	/* Container for the gallery */
 	#photos .photo-gallery {
 		display: flex;
 		justify-content: center;
 		gap: 0.5rem;
 		flex-wrap: wrap;
-		margin-top: 1rem;
+		margin-top: 1rem; /* Add some space between images */
 	}
 
+	/* Style for images */
 	#photos .photo-gallery img {
-		width: 30%; /* Each image will take up about a third of the container width */
+		width: 30%; /* Make images 30% of the container width */
 		height: auto; /* Keep aspect ratio intact */
-		object-fit: contain; /* Ensure the entire image is visible without cropping */
-		max-height: 550px; /* Optional: Set max-height if you need to limit image height */
+		object-fit: contain; /* Ensure the entire image is visible */
+		max-height: 550px; /* Optional: Set max-height to prevent images from being too tall */
 		display: block;
-		border: none; /* Remove any border */
-		box-shadow: none; /* Optional: Remove any shadow */
-		margin: 0; /* Remove margin */
-		padding: 0; /* Remove padding */
-		border-radius: 0; /* Remove border radius */
+		border: none;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+		border-radius: 0;
 	}
 
 	/* Make sure images resize well on smaller screens */
