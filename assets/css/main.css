@@ -4162,6 +4162,34 @@ body.is-mobile #main > header {
     background-attachment: scroll; /* Adjust mobile background behavior */
 }
 
+/*RSVP*/
+	/* Style for the select element */
+	#attendance {
+		background-color: #d1cbcb; /* Set a white background */
+		color: #2e3842; /* Set text color to dark grey */
+		padding: 10px;
+		border: 1px solid #ccc; /* Set a light grey border */
+		border-radius: 5px;
+		font-size: 16px;
+		width: 100%; /* Ensure it fills the width of the container */
+	}
+
+	/* Style for the options */
+	#attendance option {
+		background-color: #a29f9f; /* White background for options */
+		color: #fff; /* Dark text for the options */
+	}
+
+	/* Optional: Style for the selected option */
+	#attendance:focus {
+		outline: none; /* Remove the default blue outline on focus */
+		border-color: #ccc; /* Change border color to blue when focused */
+	}
+
+	/* Optional: Change the background color of the select box when hovered or active */
+	#attendance:hover, #attendance:active {
+		background-color: #96cff0; /* Light grey background on hover */
+	}
 
 /* Landing */
 
