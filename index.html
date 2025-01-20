@@ -594,7 +594,7 @@
 				document.addEventListener("DOMContentLoaded", () => {
 					// Reference the toggle button
 					const toggleButton = document.getElementById("languageToggle");
-					const greekSections = document.querySelectorAll('[lang="el"]');
+					const greekSections = document.querySelectorAll('[lang="gr"]');
 					const englishSections = document.querySelectorAll('[lang="en"]');
 			
 					if (!toggleButton) {
@@ -603,7 +603,7 @@
 					}
 			
 					// Initialize language state
-					let isGreek = document.documentElement.lang === "el";
+					let isGreek = document.documentElement.lang === "gr";
 					updateContent();
 			
 					// Add event listener for the toggle button
@@ -628,7 +628,7 @@
 						toggleButton.textContent = isGreek ? "English" : "Ελληνικά";
 			
 						// Update the document's language attribute
-						document.documentElement.lang = isGreek ? "el" : "en";
+						document.documentElement.lang = isGreek ? "gr" : "en";
 					}
 				});
 			</script>
