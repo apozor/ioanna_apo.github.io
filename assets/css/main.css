@@ -2209,6 +2209,18 @@ pre code {
 		.icon.style3 {
 			color: #0c2b40;
 		}
+/*language button*/
+
+#languageToggle {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	z-index: 10; /* Ensure it stays above other elements */
+	padding: 5px 15px; /* Adjust the top/bottom (5px) and left/right (15px) padding */
+    font-size: 0.9em; /* Decrease font size slightly */
+    height: auto; /* Ensure height is determined by content and padding */
+    line-height: 1.2; /* Adjust line spacing for text */
+}
 
 /* Image */
 

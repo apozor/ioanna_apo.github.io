@@ -566,40 +566,36 @@
 			
 			<script>
 				document.addEventListener("DOMContentLoaded", () => {
-					const toggleButton = document.getElementById("language-toggle");
-					const greekContent = document.getElementById("rsvp-gr");
-					const englishContent = document.getElementById("rsvp-en");
-
-					// Initialize based on the current language
+					// Reference the toggle button
+					const toggleButton = document.getElementById("languageToggle");
+					const greekSections = document.querySelectorAll('[lang="el"]');
+					const englishSections = document.querySelectorAll('[lang="en"]');
+					
+					// Initialize language state
 					let isGreek = document.documentElement.lang === "el";
 					updateContent();
-
+			
+					// Add event listener for the toggle button
 					toggleButton.addEventListener("click", () => {
-						isGreek = !isGreek;
+						isGreek = !isGreek; // Toggle language
 						updateContent();
 					});
-
+			
+					// Function to update content visibility and button text
 					function updateContent() {
-						greekContent.style.display = isGreek ? "block" : "none";
-						englishContent.style.display = isGreek ? "none" : "block";
-						toggleButton.textContent = isGreek ? "English" : "Ελληνικά";
+						greekSections.forEach(section => {
+							section.style.display = isGreek ? "block" : "none";
+						});
+						englishSections.forEach(section => {
+							section.style.display = isGreek ? "none" : "block";
+						});
+			
+						toggleButton.textContent = isGreek ? "Switch to English" : "Switch to Greek";
+						document.documentElement.lang = isGreek ? "el" : "en";
 					}
 				});
-
 			</script>
-		
-			<script>
-				document.addEventListener("DOMContentLoaded", () => {
-					// Check the user's language or page setting
-					const userLang = document.documentElement.lang || navigator.language;
-					const isGreek = userLang.startsWith("el");
-				
-					// Toggle visibility of forms
-					document.getElementById("rsvp-en").style.display = isGreek ? "none" : "block";
-					document.getElementById("rsvp-gr").style.display = isGreek ? "block" : "none";
-				});
-			</script>
-
+			
 			<script>
 				document.addEventListener("DOMContentLoaded", () => {
 					const timeSlots = document.querySelectorAll(".time-slot");
@@ -621,43 +617,6 @@
 							slot.querySelector(".dot-line").style.setProperty("--line-height", `${height}px`);
 						}
 					});
-				});
-			</script>
-			
-			<script>
-				// Set the initial language to English
-				let currentLanguage = 'en';
-			
-				// Reference the button
-				const languageToggleButton = document.getElementById('languageToggle');
-			
-				// Add an event listener to the button
-				languageToggleButton.addEventListener('click', function () {
-					// Toggle language
-					if (currentLanguage === 'en') {
-						document.body.setAttribute('lang', 'el'); // Switch to Greek
-						languageToggleButton.textContent = 'Switch to English'; // Update button text
-						currentLanguage = 'el';
-					} else {
-						document.body.setAttribute('lang', 'en'); // Switch to English
-						languageToggleButton.textContent = 'Switch to Greek'; // Update button text
-						currentLanguage = 'en';
-					}
-			
-					// Show/Hide language-specific sections
-					document.querySelectorAll('[lang="en"]').forEach(el => {
-						el.style.display = currentLanguage === 'en' ? 'block' : 'none';
-					});
-					document.querySelectorAll('[lang="el"]').forEach(el => {
-						el.style.display = currentLanguage === 'el' ? 'block' : 'none';
-					});
-				});
-			
-				// Initialize display on page load
-				document.addEventListener('DOMContentLoaded', function () {
-					// Show English by default
-					document.querySelectorAll('[lang="en"]').forEach(el => el.style.display = 'block');
-					document.querySelectorAll('[lang="el"]').forEach(el => el.style.display = 'none');
 				});
 			</script>
 			
