@@ -3799,7 +3799,7 @@ pre code {
 			border: none; /* Ensure no borders are applied */
 			position: relative;
 			z-index: 1;
-			margin-top: 40px; /* Adjust this value to control how much the h2 goes down */
+			margin-top: 30px; /* Adjust this value to control how much the h2 goes down */
 		}
 		
 
@@ -3920,7 +3920,7 @@ pre code {
 
 		#banner .photo-gallery img {
 			max-width: 32%; /* Adjust photo size */
-			height: 400px; /* Maintain aspect ratio */
+			height: 600px; /* Maintain aspect ratio */
 			object-position: top;  /* Crop from the top of the image */
 			border-radius: 5px; /* Optional: Add rounded corners */
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
