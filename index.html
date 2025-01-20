@@ -285,6 +285,7 @@
 					<section id="rsvp" class="wrapper style1 special">
 						<div class="inner">
 							<!-- English RSVP Form -->
+							
 							<div id="rsvp-en" class="rsvp-form" lang="en">
 								<header class="major">
 									<h2>RSVP</h2>
@@ -554,7 +555,30 @@
 					</footer>
 
 			</div>
-
+			<script>
+				document.addEventListener("DOMContentLoaded", () => {
+					const timeSlots = document.querySelectorAll(".time-slot");
+					const slotArray = Array.from(timeSlots);
+		
+					slotArray.forEach((slot, index) => {
+						if (index === slotArray.length - 1) return; // Skip the last slot
+		
+						const currentTime = parseInt(slot.dataset.time, 10);
+						const nextTime = parseInt(slotArray[index + 1].dataset.time, 10);
+		
+						const timeDifference = nextTime - currentTime; // Time difference in minutes
+		
+						// Calculate proportional height (adjust multiplier as needed)
+						const height = timeDifference * 2; // Example: 2px per minute
+		
+						const dotLine = slot.querySelector(".dot-line:after");
+						if (dotLine) {
+							slot.querySelector(".dot-line").style.setProperty("--line-height", `${height}px`);
+						}
+					});
+				});
+			</script>
+			
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -590,35 +614,12 @@
 							section.style.display = isGreek ? "none" : "block";
 						});
 			
-						toggleButton.textContent = isGreek ? "Switch to English" : "Switch to Greek";
+						toggleButton.textContent = isGreek ? "English" : "Ελληνικα";
 						document.documentElement.lang = isGreek ? "el" : "en";
 					}
 				});
 			</script>
 			
-			<script>
-				document.addEventListener("DOMContentLoaded", () => {
-					const timeSlots = document.querySelectorAll(".time-slot");
-					const slotArray = Array.from(timeSlots);
-		
-					slotArray.forEach((slot, index) => {
-						if (index === slotArray.length - 1) return; // Skip the last slot
-		
-						const currentTime = parseInt(slot.dataset.time, 10);
-						const nextTime = parseInt(slotArray[index + 1].dataset.time, 10);
-		
-						const timeDifference = nextTime - currentTime; // Time difference in minutes
-		
-						// Calculate proportional height (adjust multiplier as needed)
-						const height = timeDifference * 2; // Example: 2px per minute
-		
-						const dotLine = slot.querySelector(".dot-line:after");
-						if (dotLine) {
-							slot.querySelector(".dot-line").style.setProperty("--line-height", `${height}px`);
-						}
-					});
-				});
-			</script>
 			
 	</body>
 </html>
