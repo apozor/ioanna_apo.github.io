@@ -3828,10 +3828,16 @@ pre code {
 				width: 0;
 			}
 
+		#banner h2 {
+			margin-bottom: 0.2em; /* Decrease the bottom margin to reduce space between the name and date */
+		}
+		
+
 		#banner p {
 			color: #2e3842;
 			letter-spacing: 0.225em;
 			text-transform: uppercase;
+			margin-top: 0; /* Remove any top margin that may be adding space between the date and the name */
 		}
 
 			#banner p a {
