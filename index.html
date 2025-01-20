@@ -113,7 +113,8 @@
 						<h1><a href="index.html">Ioanna & Apostolos</a></h1>
 						 <!-- Language Switcher -->
 						  <!-- Language Toggle Button -->
-						<button id="languageToggle" class="language-toggle">Ελληνικά-English</button>
+						  <button id="languageToggle" class="button primary" style="position: absolute; right: 20px; top: 20px;">
+							Switch to Greek	</button>
 					</header>
 					
 					<style>
@@ -564,37 +565,6 @@
 			<script src="assets/js/main.js"></script>
 			
 			<script>
-				// Set the initial language
-				let currentLanguage = 'en'; // Default to English
-			
-				// Language toggle logic
-				document.getElementById('languageToggle').addEventListener('click', function () {
-					// Toggle language
-					if (currentLanguage === 'en') {
-						document.body.setAttribute('lang', 'el'); // Switch to Greek
-						this.textContent = 'Switch to English';
-						currentLanguage = 'el';
-					} else {
-						document.body.setAttribute('lang', 'en'); // Switch to English
-						this.textContent = 'Switch to Greek';
-						currentLanguage = 'en';
-					}
-			
-					// Show/Hide language-specific sections
-					document.querySelectorAll('[lang="en"]').forEach(el => {
-						el.style.display = currentLanguage === 'en' ? 'block' : 'none';
-					});
-					document.querySelectorAll('[lang="el"]').forEach(el => {
-						el.style.display = currentLanguage === 'el' ? 'block' : 'none';
-					});
-				});
-			
-				// Initialize display
-				document.querySelectorAll('[lang="en"]').forEach(el => el.style.display = 'block');
-				document.querySelectorAll('[lang="el"]').forEach(el => el.style.display = 'none');
-			</script>
-			
-			<script>
 				document.addEventListener("DOMContentLoaded", () => {
 					const toggleButton = document.getElementById("language-toggle");
 					const greekContent = document.getElementById("rsvp-gr");
@@ -653,5 +623,43 @@
 					});
 				});
 			</script>
+			
+			<script>
+				// Set the initial language to English
+				let currentLanguage = 'en';
+			
+				// Reference the button
+				const languageToggleButton = document.getElementById('languageToggle');
+			
+				// Add an event listener to the button
+				languageToggleButton.addEventListener('click', function () {
+					// Toggle language
+					if (currentLanguage === 'en') {
+						document.body.setAttribute('lang', 'el'); // Switch to Greek
+						languageToggleButton.textContent = 'Switch to English'; // Update button text
+						currentLanguage = 'el';
+					} else {
+						document.body.setAttribute('lang', 'en'); // Switch to English
+						languageToggleButton.textContent = 'Switch to Greek'; // Update button text
+						currentLanguage = 'en';
+					}
+			
+					// Show/Hide language-specific sections
+					document.querySelectorAll('[lang="en"]').forEach(el => {
+						el.style.display = currentLanguage === 'en' ? 'block' : 'none';
+					});
+					document.querySelectorAll('[lang="el"]').forEach(el => {
+						el.style.display = currentLanguage === 'el' ? 'block' : 'none';
+					});
+				});
+			
+				// Initialize display on page load
+				document.addEventListener('DOMContentLoaded', function () {
+					// Show English by default
+					document.querySelectorAll('[lang="en"]').forEach(el => el.style.display = 'block');
+					document.querySelectorAll('[lang="el"]').forEach(el => el.style.display = 'none');
+				});
+			</script>
+			
 	</body>
 </html>
