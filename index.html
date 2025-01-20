@@ -555,6 +555,17 @@
 					</footer>
 
 			</div>
+			
+			
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			
 			<script>
 				document.addEventListener("DOMContentLoaded", () => {
 					const timeSlots = document.querySelectorAll(".time-slot");
@@ -579,22 +590,18 @@
 				});
 			</script>
 			
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			
 			<script>
 				document.addEventListener("DOMContentLoaded", () => {
 					// Reference the toggle button
 					const toggleButton = document.getElementById("languageToggle");
 					const greekSections = document.querySelectorAll('[lang="el"]');
 					const englishSections = document.querySelectorAll('[lang="en"]');
-					
+			
+					if (!toggleButton) {
+						console.error("The language toggle button with ID 'languageToggle' is missing.");
+						return; // Exit if the button doesn't exist
+					}
+			
 					// Initialize language state
 					let isGreek = document.documentElement.lang === "el";
 					updateContent();
@@ -607,14 +614,20 @@
 			
 					// Function to update content visibility and button text
 					function updateContent() {
+						// Toggle visibility of Greek sections
 						greekSections.forEach(section => {
 							section.style.display = isGreek ? "block" : "none";
 						});
+			
+						// Toggle visibility of English sections
 						englishSections.forEach(section => {
 							section.style.display = isGreek ? "none" : "block";
 						});
 			
-						toggleButton.textContent = isGreek ? "English" : "Ελληνικα";
+						// Update button text
+						toggleButton.textContent = isGreek ? "English" : "Ελληνικά";
+			
+						// Update the document's language attribute
 						document.documentElement.lang = isGreek ? "el" : "en";
 					}
 				});
