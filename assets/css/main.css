@@ -4188,7 +4188,7 @@ body.is-mobile #main > header {
 
 	/* Optional: Change the background color of the select box when hovered or active */
 	#attendance:hover, #attendance:active {
-		background-color: #96cff0; /* Light grey background on hover */
+		background-color: #2e3842; /* Light grey background on hover */
 	}
 
 /* Landing */
